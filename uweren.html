@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Ostrzeżenie</title>
+<style>
+  body {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><text y="20" font-size="18" font-family="Arial" fill="%23000">!</text></svg>');
+    background-size: 75px 75px; /* Zwiększenie rozmiaru tła */
+  }
+  .container {
+    position: relative;
+    text-align: center;
+    top: 45vh; /* Centrowanie wertykalne */
+    transform: translateY(-50%); /* Dodatkowe centrowanie dla całego kontenera */
+  }
+  .warning-box {
+    width: 500px; /* Zwiększenie szerokości */
+    height: 250px; /* Zwiększenie wysokości */
+    border: 6px solid black; /* Grubsza ramka */
+    display: inline-block;
+    line-height: 1.5; /* Normalna wysokość linii */
+    margin: 0 250px; /* Zwiększenie marginesu */
+    background-color: red; /* Tło kwadratu */
+    font-size: 2.5em; /* Zwiększenie czcionki */
+    vertical-align: middle;
+    padding-top: 80px; /* Dostosowanie paddingu, aby tekst był na środku */
+  }
+  .warning-text {
+    display: block;
+    color: yellow;
+  }
+  .link {
+      color: white;
+      display: block;
+      text-decoration-color: red;
+  }
+  .exclamation {
+    color: red;
+    font-size: 125px; /* Zwiększenie rozmiaru wykrzyknika */
+    position: absolute;
+    top: 50%; /* Centrowanie wertykalne */
+    transform: translateY(-50%);
+  }
+  .left {
+    left: calc(50% - 325px); /* Dostosowanie pozycji z lewej strony */
+  }
+  .right {
+    right: calc(50% - 325px); /* Dostosowanie pozycji z prawej strony */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="exclamation left">!</div>
+  <div class="warning-box">
+    <span class="warning-text">Ty uweren, że chcesz otkryc ta ссылка?</span>
+    <span class="link"><a href="https://threats.kaspersky.com/en/class/Trojan-Downloader/" class="link">Da</a></span>
+  </div>
+  <div class="exclamation right">!</div>
+</div>
+</body>
+</html>
