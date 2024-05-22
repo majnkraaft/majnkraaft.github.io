@@ -5,7 +5,7 @@ function robux() {
     const sylka = document.querySelector(".sylka");
     const ura = numer + " to prawidlowy i ty dostajisz 1 free robux";
     const superura = numer + " to prawidlowy i ty dostajisz 2000000000000000000000000000000000000000000000000000000 free robux";
-    const roura = numer + " to prawidlowy i ty dostajisz -200000000000000000000000000000000000000000000000000000 free robux(doesc w dolg)";
+    const roura = numer + " to prawidlowy i ty dostajisz -200000000000000000000000000000000000000000000000000000 free robux(toesc w dolg)";
     const rb = "dostać ⏣"
     
  // ten pierwszy nie pracuji
@@ -18,7 +18,7 @@ function robux() {
         sylka.innerText = "";
     }
     else if (numer === "cyferki_z_karteczki_roberta") {
-        rezultat.innerText = ura;
+        rezultat.innerText = roura;
         sylka.innerText = rb;
     }
     else if (numer === "69/censored") {
