@@ -4,6 +4,7 @@ function robux() {
     const rezultat = document.querySelector(".rezultat");
     const sylka = document.querySelector(".sylka");
     const ura = numer + " to prawidlowy i ty dostajisz 1 free robux";
+    const superura = numer + " to prawidlowy i ty dostajisz 2000000000000000000000000000000000000000000000000000000 free robux";
     const rb = "dostać ⏣"
     
  // ten pierwszy nie pracuji
@@ -35,8 +36,8 @@ function robux() {
         rezultat.innerText = ura;
         sylka.innerText = rb;
     }
-    else if (numer === "1488") {
-        rezultat.innerText = ura;
+    else if (numer === "edwinxxxgabriela") {
+        rezultat.innerText = superura;
         sylka.innerText = rb;
     }
     else if (numer === "69") {
