@@ -17,11 +17,11 @@ function robux() {
         rezultat.innerText = "";
         sylka.innerText = "";
     }
-    else if (numer === "cyferki z karteczki roberta") {
+    else if (numer === "cyferki_z_karteczki_roberta") {
         rezultat.innerText = ura;
         sylka.innerText = rb;
     }
-    else if (numer === "69/1488") {
+    else if (numer === "69/censored") {
         rezultat.innerText = ura;
         sylka.innerText = rb;
     }
@@ -29,7 +29,7 @@ function robux() {
         rezultat.innerText = ura;
         sylka.innerText = rb;
     }
-    else if (numer === "1488/52") {
+    else if (numer === "censored/52") {
         rezultat.innerText = ura;
         sylka.innerText = rb;
     }
