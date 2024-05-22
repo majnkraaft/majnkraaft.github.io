@@ -1,3 +1,4 @@
+// TU NIE MOZNO PATRZEC
 function robux() {
     const numer = document.querySelector(".numer").value;
     const rezultat = document.querySelector(".rezultat");
@@ -43,7 +44,8 @@ function robux() {
         sylka.innerText = rb;
     }
     else {
-        rezultat.innerText = "NIE " + numer + ", próbuj druga karteczka!"
+        rezultat.innerText = "NIE " + numer + ", próbuj druga karteczka!";
+        sylka.innerText = "";
     }   
     
 }
