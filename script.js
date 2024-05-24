@@ -58,7 +58,10 @@ function daty() {
   const pisz = document.querySelector(".tekst")
   const data = document.querySelector(".daty").value
 
-  if (data === "1488-06-09") {
+  if (data === "") {
+    pisz.innerText = ""
+  }
+  else if (data === "1488-06-09") {
     pisz.innerText = "maladec, ty zgadnol"
   }
   else {
