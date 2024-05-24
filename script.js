@@ -51,3 +51,23 @@ function robux() {
     }   
     
 }
+
+
+
+function daty() {
+  const pisz = document.querySelector(".tekst")
+  const data = document.querySelector(".daty").value
+
+  if (data === "1488-06-09") {
+    pisz.innerText = "maladec, ty zgadnol"
+  }
+  else {
+    pisz.innerText = "NIE"
+  }
+}
+
+
+
+function slepy() {
+  
+}
