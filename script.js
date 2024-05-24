@@ -71,3 +71,22 @@ function daty() {
 function slepy() {
   
 }
+
+const pisz = document.querySelector(".tekst")
+
+document.addEventListener('keydown', function(event) {
+    switch(event.key) {
+        case 'r':
+            pisz.innerText = "Ty nie tupoj";
+            break;
+        case 'a':
+            pisz.innerText = "ty nacisnal a";
+            break;
+        case 'k':
+            pisz.innerText = "K nacinal Krzys?";
+            break;
+        // Add more cases as needed
+    }
+});
+
+
