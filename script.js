@@ -57,7 +57,6 @@ function robux() {
 function daty() {
   const pisz = document.querySelector(".tekst")
   const data = document.querySelector(".daty").value
-
   if (data === "") {
     pisz.innerText = ""
   }
@@ -73,7 +72,6 @@ function daty() {
 
 function slepy() {
   const otwet = document.querySelector(".otwet").value;
-  const forma = document.querySelector(".forma")
   var elements = document.getElementsByClassName('slepoj');
   if (otwet === "wybierz") {
     for (var i = 0; i < elements.length; i++) {
