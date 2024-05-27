@@ -72,9 +72,12 @@ function daty() {
 
 
 function slepy() {
-  const tekst = document.getElementsByClassName('slepoj');
-  tekst[0].style.fontSize = "50px";
+  var elements = document.getElementsByClassName('slepoj');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].style.fontSize = '40px';
+  }
 }
+
 
 
 const pisz = document.querySelector(".tekst")
