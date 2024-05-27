@@ -72,18 +72,25 @@ function daty() {
 //const forma = document.getElementsByClassName('forma');
 
 function slepy() {
-  const otwet = document.getElementsByClassName("otwet").value;
+  const otwet = document.querySelector(".otwet").value;
+  const forma = document.querySelector(".forma")
   var elements = document.getElementsByClassName('slepoj');
-  if (otwet === "DA") {
+  if (otwet === "wybierz") {
+    for (var i = 0; i < elements.length; i++) {
+    elements[i].style.fontSize = '12px';
+  }
+  else if (otwet === "DA") {
     for (var i = 0; i < elements.length; i++) {
     elements[i].style.fontSize = '60px';
    }
+  forma.innerText = "";
   }
   else {
     for (var i = 0; i < elements.length; i++) {
     elements[i].style.fontSize = '12px';
+   }
+   forma.innerText = "";
   }
- }
 }
 
 
