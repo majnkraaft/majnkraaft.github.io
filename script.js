@@ -83,13 +83,11 @@ function slepy() {
   else if (otwet = "DA") {
     for (var i = 0; i < elements.length; i++) {
     elements[i].style.fontSize = '60px';
-    forma.innerText = "";
    }
   }
   else {
     for (var i = 0; i < elements.length; i++) {
     elements[i].style.fontSize = '12px';
-    forma.innerText = "";
   }
  }
 }
