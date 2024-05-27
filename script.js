@@ -79,19 +79,19 @@ function slepy() {
     //for (var i = 0; i < elements.length; i++) {
     //elements[i].style.fontSize = '12px';
     //}
-    elements[2].innerText = "hello"
+    elements[2].innerHtml = "hello"
   }
   else if (otwet = "DA") {
     //for (var i = 0; i < elements.length; i++) {
     //elements[i].style.fontSize = '60px';
-    elements[2].innerText = "hello2"
+    elements[2].innerHtml = "hello2"
    //}
   }
   else {
     //for (var i = 0; i < elements.length; i++) {
     //elements[i].style.fontSize = '12px';
   //}
-   elements[2].innerText = "hello3"
+   elements[2].innerHtml = "hello3"
  }
 }
 
