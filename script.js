@@ -76,22 +76,20 @@ function slepy() {
   const otwet = document.querySelector(".otwet").value;
   var elements = document.getElementsByClassName('slepoj');
   if (otwet = "wybierz") {
-    //for (var i = 0; i < elements.length; i++) {
-    //elements[i].style.fontSize = '12px';
-    //}
-    elements[2].innerText = "hello"
+    for (var i = 0; i < elements.length; i++) {
+    elements[i].style.fontSize = '12px';
+    }
   }
   else if (otwet = "DA") {
-    //for (var i = 0; i < elements.length; i++) {
-    //elements[i].style.fontSize = '60px';
-    elements[2].innerText = "hello2"
-   //}
+    for (var i = 0; i < elements.length; i++) {
+    elements[i].style.fontSize = '60px';
+   }
   }
   else {
     //for (var i = 0; i < elements.length; i++) {
     //elements[i].style.fontSize = '12px';
   //}
-   elements[2].innerText = "hello3"
+   elements[2].innerHtml = "hello3"
  }
 }
 
