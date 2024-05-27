@@ -69,13 +69,12 @@ function daty() {
   }
 }
 
-
+//const forma = document.getElementsByClassName('forma');
 
 function slepy() {
-  const forma = document.getElementByClassName('forma');
-  const otwet = document.getElementByClassName("otwet").value;
+  const otwet = document.getElementsByClassName("otwet").value;
   var elements = document.getElementsByClassName('slepoj');
-  if (otwet = "DA") {
+  if (otwet === "DA") {
     for (var i = 0; i < elements.length; i++) {
     elements[i].style.fontSize = '60px';
    }
