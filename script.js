@@ -68,26 +68,26 @@ function daty() {
   }
 }
 
-//const forma = document.getElementsByClassName('forma');
-
 function slepy() {
   const otwet = document.querySelector(".otwet").value;
+  const foremka = document.querySelector(".fremka");
   var elements = document.getElementsByClassName('slepoj');
   if (otwet === "wybierz") {
     for (var i = 0; i < elements.length; i++) {
     elements[i].style.fontSize = '12px';
+   }
   }
   else if (otwet === "DA") {
     for (var i = 0; i < elements.length; i++) {
-    elements[i].style.fontSize = '60px';
+    elements[i].style.fontSize = '70px';
    }
-  forma.innerText = "";
+    foremka.innerText = ""
   }
   else {
     for (var i = 0; i < elements.length; i++) {
     elements[i].style.fontSize = '12px';
    }
-   forma.innerText = "";
+    foremka.innerText = ""
   }
 }
 
