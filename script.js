@@ -72,13 +72,10 @@ function daty() {
 
 
 function slepy() {
-  var tekst = document.getElementsByClassName('slepoj');
-  for (var i = 0; i < tekst.length; i++) {
-    elements[i].style.fontSize = '50px';
-  }
+  const tekst = document.getElementsByClassName('slepoj');
+  tekst[0].style.fontSize = "50px";
 }
 
-}
 
 const pisz = document.querySelector(".tekst")
 
