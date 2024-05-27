@@ -34,7 +34,7 @@ function robux() {
         sylka.innerText = rb;
     }
     else if (numer === "52/69") {
-        rezultat.innerText = ura;
+       rezultat.innerText = ura;
         sylka.innerText = rb;
     }
     else if (numer === "edwinxxxgabriela") {
@@ -72,9 +72,24 @@ function daty() {
 
 
 function slepy() {
+  const forma = document.getElementByClassName('forma');
+  const otwet = document.querySelector(".otwet").value;
   var elements = document.getElementsByClassName('slepoj');
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].style.fontSize = '40px';
+  if (otwet = "wybierz") {
+    for (var i = 0; i < elements.length; i++) {
+    elements[i].style.fontSize = '12px';
+   }
+  }
+  else if (otwet = "DA") {
+    for (var i = 0; i < elements.length; i++) {
+    elements[i].style.fontSize = '60px';
+    forma.innerText = "";
+   }
+  }
+  else {
+    for (var i = 0; i < elements.length; i++) {
+    elements[i].style.fontSize = '12px';
+    forma.innerText = "";
   }
 }
 
