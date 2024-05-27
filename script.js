@@ -72,7 +72,8 @@ function daty() {
 
 
 function slepy() {
-  
+  const tekst = querySelectorAll("p")
+  tekst.style.fontSize = "100px"
 }
 
 const pisz = document.querySelector(".tekst")
