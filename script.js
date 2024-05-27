@@ -91,8 +91,8 @@ function slepy() {
     elements[i].style.fontSize = '12px';
     forma.innerText = "";
   }
+ }
 }
-
 
 
 const pisz = document.querySelector(".tekst")
