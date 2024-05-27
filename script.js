@@ -73,7 +73,7 @@ function daty() {
 
 function slepy() {
   const forma = document.getElementByClassName('forma');
-  const otwet = document.querySelector(".otwet").value;
+  const otwet = document.getElementByClassName("otwet").value;
   var elements = document.getElementsByClassName('slepoj');
   if (otwet = "wybierz") {
     for (var i = 0; i < elements.length; i++) {
@@ -86,10 +86,9 @@ function slepy() {
    }
   }
   else {
-    //for (var i = 0; i < elements.length; i++) {
-    //elements[i].style.fontSize = '12px';
-  //}
-   elements[2].innerHtml = "hello3"
+    for (var i = 0; i < elements.length; i++) {
+    elements[i].style.fontSize = '12px';
+  }
  }
 }
 
