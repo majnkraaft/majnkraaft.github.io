@@ -77,19 +77,29 @@ function slepy() {
 
 const pisz = document.querySelector(".tekst")
 
+//dla klawiatury
 document.addEventListener('keydown', function(event) {
     switch(event.key) {
         case 'r':
             pisz.innerText = "Czego patrzysz???";
             break;
         case 'a':
-            pisz.innerText = "ty nacisnal a";
+            pisz.innerText = "to nacisnal Adam";
             break;
         case 'k':
-            pisz.innerText = "K nacisnal Krzys?";
+            pisz.innerText = "K nacisnal Krzys";
             break;
         case 'e':
-            pisz.innerText = "E nacisnal Edwin";
+            pisz.innerText = "kto teraz nacisnal E ten slepy";
+            break;
+        case 'g':
+            pisz.innerText = "to nacisnela Gabriela";
+            break;
+        case 'm':
+            pisz.innerText = "ty lentaj";
+            break;
+        case 't':
+            pisz.innerText = "to nacisnal Tomek";
             break;
         // Add more cases as needed
     }
