@@ -123,3 +123,8 @@ document.addEventListener('keydown', function(event) {
 });
 
 
+
+function nipotrzebna() {
+  const ranga = document.querySelector(".range").value
+  console.log(ranga)
+}
