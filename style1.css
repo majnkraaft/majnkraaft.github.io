@@ -639,7 +639,7 @@ button:hover:focus {
     right: .7em;
     top: .8em;
 	font-family: "Elusive";
-    content: '\2335';
+    content: '\2304';
     z-index: 251;
 	-webkit-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
