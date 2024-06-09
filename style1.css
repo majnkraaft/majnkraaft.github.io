@@ -19,6 +19,13 @@ https://www.cryoutcreations.eu
 This theme, like WordPress, is licensed under the GPL.
 */
 
+#unmuteButton {
+  color: blue;
+  background-color: yellow;
+  margin-bottom: 15px;
+  border-radius: 20px;
+}
+
 /*
 IMPORTANT!
 
