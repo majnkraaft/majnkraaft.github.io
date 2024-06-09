@@ -132,4 +132,9 @@ function nipotrzebna() {
 
 document.getElementById('unmuteButton').addEventListener('click', function() {
    var video = document.getElementById('myVideo');
-   video.muted = false; });
+   if (video.muted === false) {
+     video.muted = true;
+   }
+   else {
+     video.muted = false;
+   }; });
