@@ -22,7 +22,9 @@ This theme, like WordPress, is licensed under the GPL.
 #unmuteButton {
   color: blue;
   background-color: yellow;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
   border-radius: 20px;
 }
 
