@@ -128,3 +128,8 @@ function nipotrzebna() {
   const ranga = document.querySelector(".range").value
   console.log(ranga)
 }
+
+
+document.getElementById('unmuteButton').addEventListener('click', function() {
+   var video = document.getElementById('myVideo');
+   video.muted = false; });
