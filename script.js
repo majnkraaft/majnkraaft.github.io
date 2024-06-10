@@ -140,7 +140,7 @@ function nipotrzebna() {
    let b = 0;
    let c = 0;
    let d = 0;
-   //if (nokia.muted === false) {
+   if (nokia.muted === true) {
      nokia.muted = false;
    //}
    //else if (kot.muted === true && a != 1) {
