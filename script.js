@@ -132,7 +132,6 @@ function nipotrzebna() {
  let a = 0;
  let b = 0;
  let c = 0;
- let d = 0;
 
  function wlaczyc() {
    var kot = document.getElementById('kot');
@@ -141,6 +140,7 @@ function nipotrzebna() {
    var drive = document.getElementById('drive');
    if (nokia.muted === false) {
      nokia.muted = true;
+     a = 0;
    }
    else if (kot.muted === true && a === 0) {
      kot.muted = false;
@@ -151,7 +151,7 @@ function nipotrzebna() {
      teraria.muted = false;
      b = 1;
    }
-   else if (a === 1 && b === 1 && c === 0 && drive.muted === true) {
+   else if (teraria.muted === false) {
      teraria.muted = true;
      drive.muted = false;
      c = 1;
