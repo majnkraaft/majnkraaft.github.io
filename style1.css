@@ -30,6 +30,12 @@ This theme, like WordPress, is licensed under the GPL.
   border-radius: 20px;
 }
 
+
+.lista li::marker {
+  color: black;
+  background-color: black;
+}
+
 /*
 IMPORTANT!
 
