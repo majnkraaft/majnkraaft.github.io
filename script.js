@@ -147,12 +147,23 @@ function nipotrzebna() {
      kot.muted = false;
      a = 1;
    }
-   else if (kot.muted === false && a === 1) {
+   else if (kot.muted === false) {
      kot.muted = true;
      teraria.muted = false;
      b = 1;
    }
-   
+   else if (a === 1 && b === 1) {
+   teraria.muted = true;
+   drive.muted = false;
+   c = 1;
+   }
+   else if (a === 1 && b === 1 && c === 1) {
+     drive.muted = true;
+     nokia.muted = false;
+   }
+   else {
+     console.log("zle")
+   }
  };
 
 
