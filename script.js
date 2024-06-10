@@ -165,7 +165,15 @@ function nipotrzebna() {
    }
  };
 
-
+function muzyczka() {
+  var teraria = document.getElementById('teraria');
+  if (teraria.muted === false) {
+    teraria.muted = true
+  }
+  else {
+    teraria.muted = false
+  }
+}
 
 
 function trewoga() {
