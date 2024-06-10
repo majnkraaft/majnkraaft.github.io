@@ -129,21 +129,20 @@ function nipotrzebna() {
   console.log(ranga)
 }
 
-
+ let a = 0;
+ let b = 0;
+ let c = 0;
+ let d = 0;
 
  function wlaczyc() {
    var kot = document.getElementById('kot');
    var nokia = document.getElementById('nokia');
    var teraria = document.getElementById('teraria');
    var drive = document.getElementById('drive');
-   let a = 0;
-   let b = 0;
-   let c = 0;
-   let d = 0;
    if (nokia.muted === false) {
      nokia.muted = true;
    }
-   else if (kot.muted === true && a != 1) {
+   else if (kot.muted === true && a === 0) {
      kot.muted = false;
      a = 1;
    }
