@@ -131,14 +131,29 @@ function nipotrzebna() {
 
 
 
-document.getElementById('unmuteButton').addEventListener('click', function() {
-   var video = document.getElementById('myVideo');
-   if (video.muted === false) {
-     video.muted = true;
+ function wlaczyc() {
+   var kot = document.getElementById('kot');
+   var nokia = document.getElementById('nokia');
+   var teraria = document.getElementById('teraria');
+   var drive = document.getElementById('drive');
+   let a = 0;
+   let b = 0;
+   let c = 0;
+   let d = 0;
+   if (nokia.muted === false) {
+     nokia.muted = true;
    }
-   else {
-     video.muted = false;
-   }; });
+   else if (kot.muted === true && a != 1) {
+     kot.muted = false;
+     a = 1;
+   }
+   else if (kot.muted === false && a === 1) {
+     kot.muted = true;
+     teraria.muted = false;
+     b = 1;
+   }
+   
+ };
 
 
 
