@@ -203,8 +203,22 @@ body.custom-background { background-color: #ffffff; background-image: url("./log
 			<div  id="forbottom" >
 		
 		<div style="clear:both;"> </div>
+<div class="widosiki">
+<video id="kot" width="auto" height="1px" controls autoplay loop muted style="position: absolute; z-index: -15;">
+        <source src="/received_420008554146338.mp4" type="video/mp4">
+    </video>
+<video id="teraria" width="auto" height="1px" controls autoplay loop muted style="position: absolute; z-index: -16;">
+        <source src="/teraria.mp4" type="video/mp4">
+    </video>
+<video id="drive" width="auto" height="1px" controls autoplay loop muted style="position: absolute; z-index: -17;">
+        <source src="/drive.mp4" type="video/mp4">
+    </video>
+<video id="nokia" width="auto" height="1px" controls autoplay loop muted style="position: absolute; z-index: -18;">
+        <source src="/nokia.mp4" type="video/mp4">
+    </video>
+  </div>  
+<button id="unmuteButton" onclick="wlaczyc()">🎶🎵muzyka🎵🎶</button>
 
-		
 		<section id="container" class="two-columns-right">
 			<div id="content" role="main">
 			<div class="breadcrumbs"><a href="./index.html"><i>&#127968;</i><span class="screen-reader-text">Home</span></a><i>&#8250;</i> <a href="./nic.html">Życie uczni</a> <i>&#8250;</i></i> <span class="current">Majnkraft — eto nasza zizn</span></div><!--breadcrumbs-->
@@ -324,12 +338,12 @@ body.custom-background { background-color: #ffffff; background-image: url("./log
 
 
 	<footer id="footer" role="contentinfo">
-		<div id="colophon">
-		
-			
+<p style="text-align: center;">ZGADNI DATA</p>
+		<div id="colophon" style="display: flex; justify-content: center;">
+		<input type="date" placeholder="tu pisz data" class="daty" style="margin: 10px;"/><button style="margin: 10px; border-radius: 45%; background-color: #3ea1de; color: #f8f38a; font-family: Brush Script MT, cursive; font-size: 30px;" onclick="daty()">potwerdzic</button>
 			
 		</div><!-- #colophon -->
-
+		<p style="text-align: center; font-size: 30px; font-family: Courier New, monoscript" class="tekst"></p>
 		<div id="footer2">
 		
 			<div id="toTop"><i class="crycon-back2top"></i> </div><div id="site-copyright">KONIEC STRONY (tu wiecej nie ma co patrzec)</br>
