@@ -30,6 +30,16 @@ This theme, like WordPress, is licensed under the GPL.
   border-radius: 20px;
 }
 
+#muzyczkaButton {
+  color: blue;
+  background-color: yellow;
+  margin-bottom: 30px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  border-radius: 100px;
+}
 
 .lista li::marker {
   color: black;
