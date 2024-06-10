@@ -130,6 +130,7 @@ function nipotrzebna() {
 }
 
 
+
 document.getElementById('unmuteButton').addEventListener('click', function() {
    var video = document.getElementById('myVideo');
    if (video.muted === false) {
@@ -138,3 +139,12 @@ document.getElementById('unmuteButton').addEventListener('click', function() {
    else {
      video.muted = false;
    }; });
+
+
+
+
+function trewoga() {
+  alert("1")
+  alert("2")
+  alert("3")
+}
