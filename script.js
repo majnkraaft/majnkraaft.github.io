@@ -151,7 +151,7 @@ function nipotrzebna() {
      teraria.muted = false;
      b = 1;
    }
-   else if (a === 1 && b === 1) {
+   else if (a === 1 && b === 1 && c === 0) {
      teraria.muted = true;
      drive.muted = false;
      c = 1;
