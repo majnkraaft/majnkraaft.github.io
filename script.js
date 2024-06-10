@@ -152,9 +152,9 @@ function nipotrzebna() {
      b = 1;
    }
    else if (a === 1 && b === 1) {
-   teraria.muted = true;
-   drive.muted = false;
-   c = 1;
+     teraria.muted = true;
+     drive.muted = false;
+     c = 1;
    }
    else if (a === 1 && b === 1 && c === 1) {
      drive.muted = true;
