@@ -140,30 +140,30 @@ function nipotrzebna() {
    let b = 0;
    let c = 0;
    let d = 0;
-   if (nokia.muted === true) {
+   if (nokia.muted === false) {
+     nokia.muted = true;
+   }
+   else if (kot.muted === true && a != 1) {
+     kot.muted = false;
+     a = 1;
+   }
+   else if (kot.muted === false) {
+     kot.muted = true;
+     teraria.muted = false;
+     b = 1;
+   }
+   else if (a === 1 && b === 1) {
+   teraria.muted = true;
+   drive.muted = false;
+   c = 1;
+   }
+   else if (a === 1 && b === 1 && c === 1) {
+     drive.muted = true;
      nokia.muted = false;
-   //}
-   //else if (kot.muted === true && a != 1) {
-    // kot.muted = false;
-    // a = 1;
-  // }
-  // else if (kot.muted === false) {
-   //  kot.muted = true;
-   //  teraria.muted = false;
-    // b = 1;
- //  }
-  // else if (a === 1 && b === 1) {
-  // teraria.muted = true;
-  // drive.muted = false;
-  // c = 1;
-  // }
-  // else if (a === 1 && b === 1 && c === 1) {
-   //  drive.muted = true;
-   //  nokia.muted = false;
-  // }
- //  else {
-  //   console.log("zle")
-  // }
+   }
+   else {
+     console.log("zle")
+   }
  };
 
 
