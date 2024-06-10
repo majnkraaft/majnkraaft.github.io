@@ -31,8 +31,9 @@ This theme, like WordPress, is licensed under the GPL.
 }
 
 #muzyczkaButton {
-  color: black;
-  background-color: yellow;
+  color: #5eb3e6;
+  background-color: none;
+  border: none;
   margin-bottom: 30px;
   display: block;
   margin-right: auto;
