@@ -144,7 +144,18 @@ document.getElementById('unmuteButton').addEventListener('click', function() {
 
 
 function trewoga() {
-  alert("1")
-  alert("2")
-  alert("3")
+  alert("Sorry")
+  alert("This")
+  alert("image")
+  alert("is")
+  alert("not")
+  alert("allowed")
+  alert("to")
+  alert("be")
+  alert("viewed")
+  alert("Try")
+  alert("again")
+  alert("in")
+  alert("24")
+  alert("hours")
 }
