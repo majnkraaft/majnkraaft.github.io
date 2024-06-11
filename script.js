@@ -189,6 +189,7 @@ function kurilszczik() {
     dymok.muted = false;
     dymok.play()
   }
+  dymok.play()
 }
 
 function trewoga() {
