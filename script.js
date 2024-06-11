@@ -167,14 +167,24 @@ function nipotrzebna() {
 
 function muzyczka() {
   var teraria = document.getElementById('teraria');
-  if (teraria.muted === false) {
+  var dymok = document.getElementById('doscpalic');
+  if (teraria.muted === false || dymok.muted === false) {
     teraria.muted = true
   }
   else {
     teraria.muted = false
+    dymok.muted = true
   }
 }
 
+function kurilszczik() {
+  var dymok = document.getElementById('doscpalic');
+  var teraria = document.getElementById('teraria');
+  if (dymok.muted === true) {
+    dymok.muted = false;
+    teraria.muted = true;
+  }
+}
 
 function trewoga() {
   alert("This")
