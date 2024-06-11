@@ -184,6 +184,9 @@ function kurilszczik() {
     dymok.muted = false;
     teraria.muted = true;
   }
+  else {
+    console.log("jjjj")
+  }
 }
 
 function trewoga() {
