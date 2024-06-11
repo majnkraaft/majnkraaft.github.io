@@ -183,9 +183,11 @@ function kurilszczik() {
   if (dymok.muted === true) {
     dymok.muted = false;
     teraria.muted = true;
+    dymok.play()
   }
   else {
     dymok.muted = false;
+    dymok.play()
   }
 }
 
