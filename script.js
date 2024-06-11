@@ -169,7 +169,8 @@ function muzyczka() {
   var teraria = document.getElementById('teraria');
   var dymok = document.getElementById('doscpalic');
   if (teraria.muted === false || dymok.muted === false) {
-    teraria.muted = true
+    teraria.muted = true;
+    dymok.muted = true;
   }
   else {
     teraria.muted = false
