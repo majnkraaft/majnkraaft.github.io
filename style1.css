@@ -43,9 +43,13 @@ This theme, like WordPress, is licensed under the GPL.
   font-size: 35px;
 }
 
-.lista li::marker {
+.lista::marker {
   color: black;
   background-color: black;
+}
+
+.niemozno:hover {
+  cursor: not-allowed;
 }
 
 /*
