@@ -180,9 +180,13 @@ function muzyczka() {
 function kurilszczik() {
   var dymok = document.getElementById('doscpalic');
   var teraria = document.getElementById('teraria');
+  var swadba = document.getElementById('swadba');
+  var terorist = document.getElementById('terorist');
   if (dymok.muted === true) {
     dymok.muted = false;
     teraria.muted = true;
+    swadba.muted = true;
+    terorist.muted = true;
     dymok.play()
   }
   else {
@@ -192,6 +196,28 @@ function kurilszczik() {
   dymok.play()
 }
 
+function swadba() {
+  var dymok = document.getElementById('doscpalic');
+  var teraria = document.getElementById('teraria');
+  var swadba = document.getElementById('swadba');
+  var terorist = document.getElementById('terorist');
+  swadba.muted = false;
+  terorist.muted = true;
+  teraria.muted = true;
+  dymok.muted = true;
+}
+  
+function terorist() {
+  var dymok = document.getElementById('doscpalic');
+  var teraria = document.getElementById('teraria');
+  var swadba = document.getElementById('swadba');
+  var terorist = document.getElementById('terorist');
+  swadba.muted = true;
+  terorist.muted = false;
+  teraria.muted = true;
+  dymok.muted = true;
+}
+  
 function trewoga() {
   alert("This")
   alert("image")
