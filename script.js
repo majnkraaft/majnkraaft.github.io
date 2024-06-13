@@ -168,12 +168,16 @@ function nipotrzebna() {
 function muzyczka() {
   var teraria = document.getElementById('teraria');
   var dymok = document.getElementById('doscpalic');
+  var swadba = document.getElementById('swadba');
+  var terorist = document.getElementById('terorist');
   if (teraria.muted === false) {
     teraria.muted = true;
   }
   else {
-    teraria.muted = false
-    dymok.muted = true
+    teraria.muted = false;
+    dymok.muted = true;
+    swadba.muted = true;
+    terorist.muted = true;
   }
 }
 
