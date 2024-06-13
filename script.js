@@ -209,6 +209,7 @@ function swadba() {
   terorist.muted = true;
   teraria.muted = true;
   dymok.muted = true;
+  swadba.play()
 }
   
 function terorist() {
@@ -220,6 +221,7 @@ function terorist() {
   terorist.muted = false;
   teraria.muted = true;
   dymok.muted = true;
+  terorist.play()
 }
   
 function trewoga() {
