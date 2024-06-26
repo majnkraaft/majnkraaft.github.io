@@ -76,6 +76,18 @@ body.custom-background { background-color: #ffffff; background-image: url("./log
 	<link rel="icon" href="./logo.jpeg" sizes="32x32" />
 <link rel="icon" href="./logo.jpeg" sizes="192x192" />
 <link rel="apple-touch-icon" href="./logo.jpeg" />
+<style type="text/css">
+  .knopka {
+    display: inline-block;
+    outline: none;
+    border: none;
+    box-shadow: 0 9px #999;
+  }
+  .knopka:active {
+    box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  }
+</style>
 	<!--[if lt IE 9]>
 	<script>
 	document.createElement('header');
@@ -193,7 +205,7 @@ body.custom-background { background-color: #ffffff; background-image: url("./log
         <source src="/nokia.mp4" type="video/mp4">
     </video>
   </div>  
-<button id="unmuteButton" onclick="wlaczyc()">🎶🎵muzyka🎵🎶</button>
+<button id="unmuteButton" onclick="wlaczyc()" class="knopka">🎶🎵muzyka🎵🎶</button>
 		<div id="footer2">
 		
 			<div id="site-copyright">KONIEC STRONY (tu wiecej nie ma co patrzec)</br><a href="https://drive.google.com/drive/folders/1TkpLxLKW_S8sZfa-WDe59dxZ_r7bjNaj?usp=drive_link" style="color: red; font-size: 17px;"><strong>Inwalid zelazny</strong></a>
