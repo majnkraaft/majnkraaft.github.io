@@ -10,7 +10,11 @@
 <meta property="og:site_name" content="MAJNKRAFT">
 <meta property="og:description" content="(NIE CISNI TU PROSZE)">
 
-<style></style>
+<style>
+  body {
+      transition: background-color 1s ease;
+        }
+</style>
 
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 
@@ -2689,7 +2693,7 @@ Runner.instance_.setSpeed(200)
   <button onclick="skakaj()" style="margin: 5;">WYSOKO skakaj</button>
   <button onclick="wyzej()" style="margin: 5;">wyzej</button>
   <button onclick="normalno()" style="margin: 5;">normalnie</button><br>
-  <button onclick="getRandomColor()" style="margin: 5;">kolor</button>
+  <button id="changeBackgroundBtn" style="margin: 5;">kolor</button>
 </body>
 
 </html>
