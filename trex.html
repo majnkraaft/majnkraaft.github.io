@@ -2656,11 +2656,23 @@ html[subframe] body {
     // setting the timer for 20 mili seconds
   }, 20);
 }
+
+function skakaj() {
+  Runner.instance_.tRex.setJumpVelocity(20)
+  }
+function wyzej() {
+  Runner.instance_.tRex.setJumpVelocity(100)
+  }
+function normalno() {
+  Runner.instance_.tRex.setJumpVelocity(10)
+  }
   </script>
 	  
   <button onclick="autoplay()">Sam skakaj</button>
 
-
+  <button onclick="skakaj()">WYSOKO skakaj</button>
+  <button onclick="wyzej()">wyzej</button>
+  <button onclick="normalno()">normalnie</button>
 </body>
 
 </html>
