@@ -2613,18 +2613,7 @@ html[subframe] body {
 	  hideClass(".onlyforchrome");
 	}
 	
-	 function getRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-
-        document.getElementById('changeBackgroundBtn').addEventListener('click', function() {
-            document.body.style.backgroundColor = getRandomColor();
-        });
+	 
 	
 	   function autoplay() {
   setTimeout(function () {
@@ -2694,6 +2683,20 @@ Runner.instance_.setSpeed(200)
   <button onclick="wyzej()" style="margin: 5;">wyzej</button>
   <button onclick="normalno()" style="margin: 5;">normalnie</button><br>
   <button id="changeBackgroundBtn" style="margin: 5;">kolor</button>
+  <script type="text/javascript">
+    function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        document.getElementById('changeBackgroundBtn').addEventListener('click', function() {
+            document.body.style.backgroundColor = getRandomColor();
+        });
+  </script>
 </body>
 
 </html>
