@@ -2696,6 +2696,16 @@ Runner.instance_.setSpeed(200)
         document.getElementById('changeBackgroundBtn').addEventListener('click', function() {
             document.body.style.backgroundColor = getRandomColor();
         });
+        
+    // Function to check the range input value
+function checkRangeInput() {
+    const rangeInput = document.getElementById('myRange');
+    console.log('Range input value:', rangeInput.value);
+}
+
+// Set an interval to run the checkRangeInput function every 10 seconds (10000 milliseconds)
+setInterval(checkRangeInput, 10000);
+
   </script>
 </body>
 
