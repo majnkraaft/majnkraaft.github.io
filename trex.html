@@ -2743,7 +2743,7 @@ function normalno() {
   <button onclick="skakaj()" style="margin: 5;">wyzej</button>
   <button onclick="normalno()" style="margin: 5;">normalnie</button><br>
   <button id="changeBackgroundBtn" style="margin: 5;">kolor</button>
-  <br><div style="margin: auto;"><input type="range" id="myRange" class="range"></div>
+  <br><!--<div style="margin: auto;"><input type="range" id="myRange" class="range"></div>-->
   <script type="text/javascript">
     function getRandomColor() {
             const letters = '0123456789ABCDEF';
@@ -2759,14 +2759,14 @@ function normalno() {
         });
         
     // Function to check the range input value
-function checkRangeInput() {
-    const rangeInput = document.getElementById('myRange');
-    console.log('Range input value:', rangeInput.value);
-    Runner.instance_.setSpeed(rangeInput.value)
+//function checkRangeInput() {
+    //const rangeInput = document.getElementById('myRange');
+ //   console.log('Range input value:', rangeInput.value);
+//    Runner.instance_.setSpeed(rangeInput.value)
 }
 
 // Set an interval to run the checkRangeInput function every 10 seconds (10000 milliseconds)
-setInterval(checkRangeInput, 5000);
+//setInterval(checkRangeInput, 5000);-->
 
   </script>
 </body>
