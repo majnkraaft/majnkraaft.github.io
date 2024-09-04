@@ -2743,6 +2743,7 @@ function normalno() {
   <button onclick="skakaj()" style="margin: 5; background-color: red;">wyzej</button>
   <button onclick="normalno()" style="margin: 5;">normalnie</button><br>
   <button id="changeBackgroundBtn" style="margin: 5;">kolor</button>
+  <button onclick="immortal()" style="margin: 5; background-color: red;">besmertnyj</button>
   <br><div style="margin: auto;"><input type="range" id="myRange" class="range"></div>
   <script type="text/javascript">
     function getRandomColor() {
@@ -2769,10 +2770,11 @@ function checkRangeInput() {
 setInterval(checkRangeInput, 10);
 
 function immortal() {
-  
+  var original = Runner.prototype.gameOver
+  Runner.prototype.gameOver = function(){}
 }
 function mortal() {
-  
+  Runner.prototype.gameOver = original
 }
   </script>
 </body>
