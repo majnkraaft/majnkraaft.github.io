@@ -2744,7 +2744,7 @@ Runner.instance_.setSpeed(200)
   <button onclick="wyzej()" style="margin: 5;">wyzej</button>
   <button onclick="normalno()" style="margin: 5;">normalnie</button><br>
   <button id="changeBackgroundBtn" style="margin: 5;">kolor</button>
-  <br><div style="margin: auto;"><input type="range" class="range"></div>
+  <br><div style="margin: auto;"><input type="range" id="myRange" class="range"></div>
   <script type="text/javascript">
     function getRandomColor() {
             const letters = '0123456789ABCDEF';
@@ -2763,10 +2763,11 @@ Runner.instance_.setSpeed(200)
 function checkRangeInput() {
     const rangeInput = document.getElementById('myRange');
     console.log('Range input value:', rangeInput.value);
+    Runner.instance_.setSpeed(rangeInput.value)
 }
 
 // Set an interval to run the checkRangeInput function every 10 seconds (10000 milliseconds)
-setInterval(checkRangeInput, 10000);
+setInterval(checkRangeInput, 5000);
 
   </script>
 </body>
