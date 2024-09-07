@@ -1817,7 +1817,7 @@ input[type=range]::-ms-thumb {
     * @param {number} speed
     */
     update: function(deltaTime, speed) {
-    var increment = Math.floor(speed * (FPS / 500) * deltaTime);
+    var increment = Math.floor(speed * (FPS / 1000) * deltaTime);
     if (this.xPos[0] <= 0) {
     this.updateXPos(0, increment);
     } else {
