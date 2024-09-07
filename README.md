@@ -1,1 +1,0 @@
-Edwin (i Tomek, i Gabriela) NIE LEZ ze swojimi idejami
