@@ -1,4 +1,4 @@
-// TU NIE MOZNO PATRZEC
+// TU NIE MOZNO PATRZEĆ
 function robux() {
     const numer = document.querySelector(".numer").value;
     const rezultat = document.querySelector(".rezultat");
