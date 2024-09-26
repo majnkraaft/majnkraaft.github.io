@@ -170,6 +170,7 @@ function muzyczka() {
   var dymok = document.getElementById('doscpalic');
   var swadba = document.getElementById('swadba');
   var terorist = document.getElementById('terorist');
+  var krutoj = document.getElementById('krutoj');
   if (teraria.muted === false) {
     teraria.muted = true;
   }
@@ -178,6 +179,7 @@ function muzyczka() {
     dymok.muted = true;
     swadba.muted = true;
     terorist.muted = true;
+    krutoj.muted = true;
   }
 }
 
@@ -186,11 +188,13 @@ function kurilszczik() {
   var teraria = document.getElementById('teraria');
   var swadba = document.getElementById('swadba');
   var terorist = document.getElementById('terorist');
+ var krutoj = document.getElementById('krutoj'); 
   if (dymok.muted === true) {
     dymok.muted = false;
     teraria.muted = true;
     swadba.muted = true;
     terorist.muted = true;
+    krutoj.muted = true;
     dymok.play()
   }
   else {
@@ -205,10 +209,12 @@ function swadba() {
   var teraria = document.getElementById('teraria');
   var swadba = document.getElementById('swadba');
   var terorist = document.getElementById('terorist');
+  var krutoj = document.getElementById('krutoj');
   swadba.muted = false;
   terorist.muted = true;
   teraria.muted = true;
   dymok.muted = true;
+  krutoj.muted = true;
   swadba.play()
 }
   
@@ -217,11 +223,27 @@ function terorist() {
   var teraria = document.getElementById('teraria');
   var swadba = document.getElementById('swadba');
   var terorist = document.getElementById('terorist');
+  var krutoj = document.getElementById('krutoj');
   swadba.muted = true;
   terorist.muted = false;
   teraria.muted = true;
   dymok.muted = true;
+  krutoj.muted = true;
   terorist.play()
+}
+
+function krutoj() {
+  var dymok = document.getElementById('doscpalic');
+  var teraria = document.getElementById('teraria');
+  var swadba = document.getElementById('swadba');
+  var terorist = document.getElementById('terorist');
+  var krutoj = document.getElementById('krutoj');
+  swadba.muted = true;
+  terorist.muted = true;
+  teraria.muted = true;
+  dymok.muted = true;
+  krutoj.muted = false;
+  krutoj.play()
 }
   
 function trewoga() {
