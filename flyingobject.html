@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Flying Object Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        .object {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="object" id="object"></div>
+    <script>
+        const object = document.getElementById('object');
+        let x = window.innerWidth / 2;
+        let y = window.innerHeight / 2;
+        let dx = (Math.random() - 0.5) * 10;
+        let dy = (Math.random() - 0.5) * 10;
+
+        function animate() {
+            x += dx;
+            y += dy;
+
+            if (x <= 0 || x >= window.innerWidth - 50) {
+                dx = -dx;
+            }
+            if (y <= 0 || y >= window.innerHeight - 50) {
+                dy = -dy;
+            }
+
+            object.style.left = x + 'px';
+            object.style.top = y + 'px';
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
