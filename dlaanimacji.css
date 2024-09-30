@@ -1,0 +1,104 @@
+/* Define the keyframes for the fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Apply the animation to an element */
+.fade-out {
+  animation: fadeOut 2s forwards;
+}
+
+/* Define the keyframes for the slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation to an element */
+.slide-in {
+  animation: slideIn 1s forwards;
+}
+
+
+/* Include the animations defined above */
+.fade-out {
+  animation: fadeOut 2s forwards;
+}
+
+.slide-in {
+  animation: slideIn 1s forwards;
+}
+
+/* Define the keyframes for the bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Apply the animation to an element */
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Define the keyframes for the rotate animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply the animation to an element */
+.rotate {
+  animation: rotate 2s linear infinite;
+}
+
+/* Define the keyframes for the pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the animation to an element */
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+
+/* Include the animations defined above */
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+.rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
