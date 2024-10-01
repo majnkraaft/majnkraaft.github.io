@@ -262,3 +262,30 @@ function trewoga() {
   alert("24")
   alert("hours")
 }
+
+
+//dla latającego
+const object = document.getElementById('object');
+        let x = window.innerWidth / 2;
+        let y = window.innerHeight / 2;
+        let dx = (Math.random() - 0.5) * 10;
+        let dy = (Math.random() - 0.5) * 10;
+
+        function animate() {
+            x += dx;
+            y += dy;
+
+            if (x <= 0 || x >= window.innerWidth - 50) {
+                dx = -dx;
+            }
+            if (y <= 0 || y >= window.innerHeight - 50) {
+                dy = -dy;
+            }
+
+            object.style.left = x + 'px';
+            object.style.top = y + 'px';
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
