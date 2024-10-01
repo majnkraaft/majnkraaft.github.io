@@ -19,16 +19,30 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        #score {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+        }
     </style>
 </head>
 <body>
     <div class="object" id="object"></div>
+    <div id="score">Score: 0</div>
     <script>
         const object = document.getElementById('object');
+        const scoreDisplay = document.getElementById('score');
+        let score = 0;
         let x = window.innerWidth / 2;
         let y = window.innerHeight / 2;
         let dx = (Math.random() - 0.5) * 10;
         let dy = (Math.random() - 0.5) * 10;
+
+        object.addEventListener('click', function() {
+            score++;
+            scoreDisplay.innerText = 'Score: ' + score;
+        });
 
         function animate() {
             x += dx;
