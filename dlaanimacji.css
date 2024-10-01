@@ -102,3 +102,17 @@
 .pulse {
   animation: pulse 1s infinite;
 }
+
+
+/* dla latającego*/
+.object {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+  /* w body
+  <div class="object" id="object"></div> */
