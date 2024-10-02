@@ -295,8 +295,8 @@ const object = document.getElementById('lata');
 const img = document.getElementById('bouncingImage');
 let posX = 0;
 let posY = 0;
-let velocityX = 2; // Adjust speed as needed
-let velocityY = 2;
+let velocityX = 100; // Adjust speed as needed
+let velocityY = 100;
 
 function moveImage() {
     const imgWidth = img.clientWidth;
