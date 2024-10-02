@@ -8,16 +8,26 @@
   }
 }
 
+@keyframes fadeInd {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.01;
+  }
+}
 /* Apply the animation to an element */
 .fade-in {
   animation: fadeIn 4s forwards;
 }
-
+.fade-ind  {
+  animation: fadeInd 4s forwards;
+}
 /* Define the keyframes for the slide-in animation */
 @keyframes slideIn {
   from {
     transform: translateX(-100%);
-    opacity: 0;
+    opacity: 0.99;
   }
   to {
     transform: translateX(0);
@@ -51,10 +61,10 @@
 
 /* Apply the animation to an element */
 .slide-r {
-  animation: slideIn 3s 3s forwards;
+  animation: slideIn 3s forwards;
 }
 .slide-l {
-  animation: slideLef 3s 3.5s forwards;
+  animation: slideLef 3s forwards;
 }
 .slide-t {
   animation: slideTop 3s 3s forwards;
