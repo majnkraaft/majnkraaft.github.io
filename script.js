@@ -291,7 +291,7 @@ const object = document.getElementById('lata');
         animate();
         
         
-//latające zdjęcie
+//latające zdjęcie albo GIF
 const img = document.getElementById('bouncingImage');
 let posX = 0;
 let posY = 0;
