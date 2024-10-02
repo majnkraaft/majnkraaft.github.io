@@ -127,7 +127,7 @@
 #bouncingImage {
     position: absolute;
     width: 50px; /* Adjust size as needed */
-    animation: rotate 2s linear infinite; /* Add rotation animation */
+    animation: rotate 1.5s linear infinite; /* Add rotation animation */
 }
 
 @keyframes rotate {
