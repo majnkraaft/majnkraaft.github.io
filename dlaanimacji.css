@@ -116,3 +116,25 @@
         }
   /* w body
   <div class="object" id="object"></div> */
+  
+  
+  /*latające zdjęcie albo GIF*/
+  body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#bouncingImage {
+    position: absolute;
+    width: 50px; /* Adjust size as needed */
+    animation: rotate 2s linear infinite; /* Add rotation animation */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
