@@ -21,7 +21,7 @@
   animation: fadeIn 4s forwards;
 }
 .fade-ind  {
-  animation: fadeInd 0.4s forwards;
+  animation: fadeInd 5s forwards;
 }
 /* Define the keyframes for the slide-in animation */
 @keyframes slideIn {
@@ -36,7 +36,7 @@
 }
 @keyframes slideTop {
   from {
-    transform: translateY(400%);
+    transform: translateY(300%);
     opacity: 0.999;
   }
   to {
@@ -56,7 +56,7 @@
 }
 @keyframes slideBot {
   from {
-    transform: translateY(-1500%);
+    transform: translateY(-5000%);
     opacity: 0.999;
   }
   to {
@@ -130,7 +130,10 @@
 
 /* Apply the animation to an element */
 .pulse {
-  animation: pulse 1s 10s infinite;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-delay: 10s;
+  animation-iteration-count: infinite;
 }
 
 
