@@ -132,17 +132,16 @@
 
 /* dla latającego*/
 .lata {
-            width: 50px;
+            width: 200px;
             height: auto;
             /*background-image: url('krzyska.gif');*/
             background-color: red;
-            position: absolute;
+            /*position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-             width: 50px; /* Adjust size as needed */
-    animation: rotate 1.5s linear infinite;
-            z-index: 9999;
+             width: 50px; Adjust size as needed
+    animation: rotate 1.5s linear infinite;*/
         }
   /* w body
   <div class="object" id="object"></div> */
