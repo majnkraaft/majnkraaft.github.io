@@ -10,7 +10,7 @@
 
 /* Apply the animation to an element */
 .fade-in {
-  animation: fadeIn 2s forwards;
+  animation: fadeIn 5s forwards;
 }
 
 /* Define the keyframes for the slide-in animation */
@@ -49,10 +49,10 @@
 
 /* Apply the animation to an element */
 .slide-r {
-  animation: slideIn 3s 2s forwards;
+  animation: slideIn 3s 5s forwards;
 }
 .slide-l {
-  animation: slideLef 3s 2.5s forwards;
+  animation: slideLef 3s 5.5s forwards;
 }
 .slide-t {
   animation: slideTop 3s 3s forwards;
