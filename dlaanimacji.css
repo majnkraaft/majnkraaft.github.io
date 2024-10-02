@@ -21,7 +21,7 @@
   animation: fadeIn 4s forwards;
 }
 .fade-ind  {
-  animation: fadeInd 4s forwards;
+  animation: fadeInd 0.4s forwards;
 }
 /* Define the keyframes for the slide-in animation */
 @keyframes slideIn {
@@ -36,7 +36,7 @@
 }
 @keyframes slideTop {
   from {
-    transform: translateY(100%);
+    transform: translateY(200%);
   }
   to {
     transform: translateY(0);
@@ -44,15 +44,17 @@
 }
 @keyframes slideLef {
   from {
-    transform: translateX(100%);
+    transform: translateX(200%);
+    opacity: 0.999;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes slideBot {
   from {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
   }
   to {
     transform: translateY(0);
@@ -61,10 +63,10 @@
 
 /* Apply the animation to an element */
 .slide-r {
-  animation: slideIn 3s forwards;
+  animation: slideIn 3s 0.4s forwards;
 }
 .slide-l {
-  animation: slideLef 3s forwards;
+  animation: slideLef 3s 0.8s forwards;
 }
 .slide-t {
   animation: slideTop 3s 3s forwards;
