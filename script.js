@@ -265,7 +265,7 @@ function trewoga() {
 
 
 //dla latającego
-const object = document.getElementById('object');
+const object = document.getElementById('lata');
         let x = window.innerWidth / 2;
         let y = window.innerHeight / 2;
         let dx = (Math.random() - 0.5) * 10;
