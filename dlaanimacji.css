@@ -108,8 +108,8 @@
 .lata {
             width: 50px;
             height: auto;
-            background-image: url('krzyska.gif');
-            /*background-color: red;*/
+            /*background-image: url('krzyska.gif');*/
+            background-color: red;
             position: absolute;
             top: 50%;
             left: 50%;
