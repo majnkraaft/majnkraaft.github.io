@@ -289,3 +289,35 @@ const object = document.getElementById('lata');
         }
 
         animate();
+        
+        
+//latające zdjęcie
+const img = document.getElementById('bouncingImage');
+let posX = 0;
+let posY = 0;
+let velocityX = 2; // Adjust speed as needed
+let velocityY = 2;
+
+function moveImage() {
+    const imgWidth = img.clientWidth;
+    const imgHeight = img.clientHeight;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    posX += velocityX;
+    posY += velocityY;
+
+    if (posX + imgWidth > windowWidth || posX < 0) {
+        velocityX *= -1; // Reverse direction on X-axis
+    }
+    if (posY + imgHeight > windowHeight || posY < 0) {
+        velocityY *= -1; // Reverse direction on Y-axis
+    }
+
+    img.style.left = posX + 'px';
+    img.style.top = posY + 'px';
+
+    requestAnimationFrame(moveImage);
+}
+
+moveImage();
