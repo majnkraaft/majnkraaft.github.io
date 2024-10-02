@@ -126,7 +126,7 @@
 
 /* Apply the animation to an element */
 .pulse {
-  animation: pulse 1s 3s infinite;
+  animation: pulse 1s 5s infinite;
 }
 
 
