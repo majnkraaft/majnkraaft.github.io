@@ -1,16 +1,16 @@
 /* Define the keyframes for the fade-out animation */
-@keyframes fadeOut {
+@keyframes fadeIn {
   from {
-    opacity: 1;
+    opacity: 0;
   }
   to {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
 /* Apply the animation to an element */
-.fade-out {
-  animation: fadeOut 2s forwards;
+.fade-in {
+  animation: fadeIn 2s forwards;
 }
 
 /* Define the keyframes for the slide-in animation */
@@ -22,21 +22,47 @@
     transform: translateX(0);
   }
 }
+@keyframes slideTop {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideLef {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideBot {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 
 /* Apply the animation to an element */
-.slide-in {
-  animation: slideIn 5s forwards;
+.slide-r {
+  animation: slideIn 3s 2s forwards;
 }
-
+.slide-l {
+  animation: slideLef 3s 2.5s forwards;
+}
+.slide-t {
+  animation: slideTop 3s 3s forwards;
+}
+.slide-b {
+  animation: slideBot 3s 3.5s forwards;
+}
 
 /* Include the animations defined above */
-.fade-out {
-  animation: fadeOut 2s forwards;
-}
 
-.slide-in {
-  animation: slideIn 1s forwards;
-}
 
 /* Define the keyframes for the bounce animation */
 @keyframes bounce {
