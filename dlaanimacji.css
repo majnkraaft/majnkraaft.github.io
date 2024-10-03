@@ -56,7 +56,7 @@
 }
 @keyframes slideBot {
   from {
-    transform: translateY(-50%);
+    transform: translateY(1000px);
     opacity: 0.999;
   }
   to {
