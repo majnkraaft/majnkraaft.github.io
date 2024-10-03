@@ -316,7 +316,7 @@ input[type=range]::-ms-thumb {
     soundSrc = soundSrc.substr(soundSrc.indexOf(',') + 1);
     var buffer = decodeBase64ToArrayBuffer(soundSrc);
     // Async, so no guarantee of order in array.
-    this.audioContext.decodeAudioData( function(index, audioData) {
+    this.audioContext.decodeAudioData(buffer, function(index, audioData) {
     this.soundFx[index] = audioData;
     }.bind(this, sound));
     }
@@ -799,7 +799,7 @@ input[type=range]::-ms-thumb {
     * Decodes the base 64 audio to ArrayBuffer used by Web Audio.
     * @param {string} base64String
     */
-    function decodeBase64ToArrayBuffer(base64String) {
+   /* function decodeBase64ToArrayBuffer(base64String) {
     var len = (base64String.length / 4) * 3;
     var str = atob(base64String);
     var arrayBuffer = new ArrayBuffer(len);
@@ -808,7 +808,7 @@ input[type=range]::-ms-thumb {
     bytes[i] = str.charCodeAt(i);
     }
     return bytes.buffer;
-    }
+    } */
     /**
     * Return the current timestamp.
     * @return {number}
