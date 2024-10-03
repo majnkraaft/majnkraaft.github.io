@@ -79,9 +79,31 @@
   animation: slideBot 3s 0.4s forwards;
 }
 
-/* Include the animations defined above */
+@keyframes nz {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: green;
+  }
+}
 
+keyframes zn {
+  from {
+    background-color: green;
+  }
+  to {
+    background-color: blue;
+  }
+}
 
+.bgkbesm {
+  animation: nz 3s;
+}
+
+.bgkkol {
+  animation: zn 3s;
+}
 /* Define the keyframes for the bounce animation */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
