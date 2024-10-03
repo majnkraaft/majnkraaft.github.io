@@ -158,6 +158,8 @@ input[type=range]::-ms-thumb {
     /** @const */
     var IS_IOS =
     window.navigator.userAgent.indexOf('UIWebViewForStaticFileContent') > -1;
+    var IS_ANDROID = window.navigator.userAgent.indexOf('Android') > -1;
+
     /** @const */
     var IS_MOBILE = window.navigator.userAgent.indexOf('Mobi') > -1 || IS_IOS;
     /** @const */
@@ -306,7 +308,7 @@ input[type=range]::-ms-thumb {
     * Load and decode base 64 encoded sounds.
     */
     loadSounds: function() {
-    if (!IS_IOS) {
+    if (!IS_ANDROID) {
     this.audioContext = new AudioContext();
     var resourceTemplate =
     document.getElementById(this.config.RESOURCE_TEMPLATE_ID).content;
