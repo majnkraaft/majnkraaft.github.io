@@ -316,7 +316,7 @@ input[type=range]::-ms-thumb {
     soundSrc = soundSrc.substr(soundSrc.indexOf(',') + 1);
     var buffer = decodeBase64ToArrayBuffer(soundSrc);
     // Async, so no guarantee of order in array.
-    this.audioContext.decodeAudioData(buffer, function(index, audioData) {
+    this.audioContext.decodeAudioData( function(index, audioData) {
     this.soundFx[index] = audioData;
     }.bind(this, sound));
     }
