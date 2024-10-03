@@ -36,7 +36,7 @@
 }
 @keyframes slideTop {
   from {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
     opacity: 0.999;
   }
   to {
