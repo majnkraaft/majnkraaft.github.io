@@ -36,7 +36,7 @@
 }
 @keyframes slideTop {
   from {
-    transform: translateY(200%);
+    transform: translateY(100%);
     opacity: 0.999;
   }
   to {
@@ -56,7 +56,7 @@
 }
 @keyframes slideBot {
   from {
-    transform: translateY(-50000%);
+    transform: translateY(-50%);
     opacity: 0.999;
   }
   to {
