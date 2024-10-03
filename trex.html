@@ -308,7 +308,7 @@ input[type=range]::-ms-thumb {
     * Load and decode base 64 encoded sounds.
     */
     loadSounds: function() {
-    if (!IS_ANDROID) {
+    if (!IS_IOS) {
     this.audioContext = new AudioContext();
     var resourceTemplate =
     document.getElementById(this.config.RESOURCE_TEMPLATE_ID).content;
