@@ -36,7 +36,7 @@
 }
 @keyframes slideTop {
   from {
-    transform: translateY(100%);
+    transform: translateY(-100%);
     opacity: 0.999;
   }
   to {
@@ -67,16 +67,16 @@
 
 /* Apply the animation to an element */
 .slide-r {
-  animation: slideIn 3s 0.4s forwards;
+  animation: slideIn 3s 0.1s forwards;
 }
 .slide-l {
-  animation: slideLef 3s 0.8s forwards;
+  animation: slideLef 3s 0.2s forwards;
 }
 .slide-t {
-  animation: slideTop 3s 1.1s forwards;
+  animation: slideTop 3s 0.3s forwards;
 }
 .slide-b {
-  animation: slideBot 3s 1.3s forwards;
+  animation: slideBot 3s 0.4s forwards;
 }
 
 /* Include the animations defined above */
