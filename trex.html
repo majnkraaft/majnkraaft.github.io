@@ -801,7 +801,7 @@ input[type=range]::-ms-thumb {
     * Decodes the base 64 audio to ArrayBuffer used by Web Audio.
     * @param {string} base64String
     */
-   /* function decodeBase64ToArrayBuffer(base64String) {
+    function decodeBase64ToArrayBuffer(base64String) {
     var len = (base64String.length / 4) * 3;
     var str = atob(base64String);
     var arrayBuffer = new ArrayBuffer(len);
@@ -810,7 +810,7 @@ input[type=range]::-ms-thumb {
     bytes[i] = str.charCodeAt(i);
     }
     return bytes.buffer;
-    } */
+    } 
     /**
     * Return the current timestamp.
     * @return {number}
