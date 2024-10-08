@@ -37,8 +37,8 @@
 <body>
     <div class="object" id="object"></div>
     <div id="score">Score: 0</div>
-    <div class="iframe-container"><video id="wideo"><source src="video.mp4"></video></div>
-    <script src="https://www.yutube.com/iframe_api"></script>
+    <div class="iframe-container"><video id="wideo"><source src="https://cdn.mtdv.me/video/rick.mp4"></video></div>
+    
     <script>
         const object = document.getElementById('object');
         const scoreDisplay = document.getElementById('score');
@@ -52,8 +52,7 @@
         object.addEventListener('click', function() {
             score++;
             scoreDisplay.innerText = 'Score: ' + score;
-            var iframe = document.getElementById('existingPlayer');
-             player.playVideo();
+           rick.play()
         });
 
         function animate() {
@@ -76,22 +75,9 @@
         animate();
     </script>
     <script>var player;
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('existingPlayer', {
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-        }
-    });
-}
 
 
 
-function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.ENDED) {
-        console.log('Video has ended.');
-    }
-}
 </script>
 </body>
 </html>
