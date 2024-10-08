@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Flying Object Animation</title>
+    <meta property="og:title" content="Czerwony kwadrat">
+    <meta property="og:description" content="Poprobuj, moj rekord 10">
+    <meta property="og:image" content="https://majnkraaft.github.io/kwadrat.png">
+    <meta property="og:site_name" content="MAJNKRAFT">
+    <title>CZERWONY KWADRAT</title>
     <style>
         body {
             margin: 0;
@@ -49,11 +53,11 @@
         let score = 0;
         let x = window.innerWidth / 2;
         let y = window.innerHeight / 2;
-        let dx = (Math.random() - 0.5) * 15;
-        let dy = (Math.random() - 0.5) * 15;
+        let dx = (Math.random() - 0.5) * 12;
+        let dy = (Math.random() - 0.5) * 12;
 
         object.addEventListener('click', function() {
-          if (score === 10) {
+          if (score === 9) {
             score++;
             scoreDisplay.innerText = 'Score: ' + score;
           rick.style.visibility = "visible";
