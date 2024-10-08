@@ -30,10 +30,11 @@
 <body>
     <div class="object" id="object"></div>
     <div id="score">Score: 0</div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=UoQTto7hrWwyMoNl&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div id="wideo"><iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=UoQTto7hrWwyMoNl&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
     <script>
         const object = document.getElementById('object');
         const scoreDisplay = document.getElementById('score');
+        var rick = document.getElementById('wideo')
         let score = 0;
         let x = window.innerWidth / 2;
         let y = window.innerHeight / 2;
@@ -43,6 +44,7 @@
         object.addEventListener('click', function() {
             score++;
             scoreDisplay.innerText = 'Score: ' + score;
+            rick.play();
         });
 
         function animate() {
