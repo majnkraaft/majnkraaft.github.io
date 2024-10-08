@@ -53,10 +53,16 @@
         let dy = (Math.random() - 0.5) * 15;
 
         object.addEventListener('click', function() {
+          if (score === 10) {
             score++;
             scoreDisplay.innerText = 'Score: ' + score;
           rick.style.visibility = "visible";
            rick.play();
+          }
+          else {
+            score++;
+            scoreDisplay.innerText = 'Score: ' + score;
+          }
         });
 
         function animate() {
