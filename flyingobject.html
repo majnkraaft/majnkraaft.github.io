@@ -30,7 +30,9 @@
            justify-content: center;
            align-items: center;
            width: 100%; /* Adjust as needed */
+           height: 100%;
           position: absolute;
+          visibility: hidden;
 }
 
     </style>
@@ -53,7 +55,8 @@
         object.addEventListener('click', function() {
             score++;
             scoreDisplay.innerText = 'Score: ' + score;
-           rick.play()
+          rick.style.visibility = "visible";
+           rick.play();
         });
 
         function animate() {
