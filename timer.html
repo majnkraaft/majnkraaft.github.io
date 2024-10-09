@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            height: 100vh;
+            background-color: #282c34;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown">
+        <div class="countdown-number" id="days">00</div>
+        <div class="countdown-label">Days</div>
+        <div class="countdown-number" id="hours">00</div>
+        <div class="countdown-label">Hours</div>
+        <div class="countdown-number" id="minutes">00</div>
+        <div class="countdown-label">Minutes</div>
+        <div class="countdown-number" id="seconds">00</div>
+        <div class="countdown-label">Seconds</div>
+    </div>
+    <script>
+        const countdown = () => {
+            const countDate = new Date('Dec 31, 2024 00:00:00').getTime();
+            const now = new Date().getTime();
+            const gap = countDate - now;
+
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+
+            const days = Math.floor(gap / day);
+            const hours = Math.floor((gap % day) / hour);
+            const minutes = Math.floor((gap % hour) / minute);
+            const seconds = Math.floor((gap % minute) / second);
+
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+        };
+
+        setInterval(countdown, 1000);
+    </script>
+</body>
+</html>
