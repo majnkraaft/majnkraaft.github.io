@@ -10,6 +10,34 @@
     <title>CZERWONY KWADRAT</title>
     <style>
         body {
+            display: flex;
+            justify-content: flex-end; /* Aligns items to the right */
+            align-items: flex-start; /* Aligns items to the top */
+            height: 100vh;
+            background-color: #282c34;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+        }
+    </style>
+    <style>
+        body {
             margin: 0;
             overflow: hidden;
             background-color: #f0f0f0;
@@ -44,6 +72,10 @@
 <body>
     <div class="object" id="object"></div>
     <div id="score">Score: 0</div>
+    <div class="countdown">
+        <div class="countdown-number" id="seconds">30</div>
+        <div class="countdown-label">Sekund</div>
+    </div>
     <div class="iframe-container"><video id="wideo"><source src="https://cdn.mtdv.me/video/rick.mp4"></video></div>
     
     <script>
@@ -87,11 +119,25 @@
         }
 
         animate();
-    </script>
-    <script>var player;
+    
+    
+    const countdown = () => {
+            const countdownElement = document.getElementById('seconds');
+            let timeLeft = 30;
 
+            const updateCountdown = () => {
+                countdownElement.innerText = timeLeft;
+                if (timeLeft > 0) {
+                    timeLeft--;
+                } else {
+                    timeLeft = 30; // Reset to 30 seconds
+                }
+            };
 
+            setInterval(updateCountdown, 1000);
+        };
 
-</script>
+        countdown();
+        </script>
 </body>
 </html>
