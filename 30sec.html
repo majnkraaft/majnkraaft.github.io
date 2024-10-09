@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30-Second Countdown Timer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown">
+        <div class="countdown-number" id="seconds">30</div>
+        <div class="countdown-label">Seconds</div>
+    </div>
+    <script>
+        const countdown = () => {
+            const countdownElement = document.getElementById('seconds');
+            let timeLeft = 30;
+
+            const updateCountdown = () => {
+                countdownElement.innerText = timeLeft;
+                if (timeLeft > 0) {
+                    timeLeft--;
+                } else {
+                    timeLeft = 30; // Reset to 30 seconds
+                }
+            };
+
+            setInterval(updateCountdown, 1000);
+        };
+
+        countdown();
+    </script>
+</body>
+</html>
