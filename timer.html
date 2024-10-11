@@ -92,6 +92,9 @@
             if (minutes === 1) {
               document.getElementById("minuta").innerHTML = "Minuta";
             }
+            else if (minutes === 0) {
+              document.getElementById("minuta").innerHTML = "Minut";
+            }
             else if (minutes < 5) {
               document.getElementById("minuta").innerHTML = "Minuty";
             }
@@ -106,6 +109,9 @@
             else if (hours < 5) {
               document.getElementById("godzina").innerHTML = "Godziny";
             }
+            else if (hours === 0) {
+              document.getElementById("godzina").innerHTML = "Godzin";
+            }
             else {
               document.getElementById("godzina").innerHTML = "Godzin";
             }
@@ -113,6 +119,9 @@
             //sekundy
             if (seconds === 1) {
               document.getElementById("sekunda").innerHTML = "Sekunda";
+            }
+            else if (seconds === 0) {
+              document.getElementById("sekunda").innerHTML = "Sekund";
             }
             else if (seconds < 5) {
               document.getElementById("sekunda").innerHTML = "Sekundy";
