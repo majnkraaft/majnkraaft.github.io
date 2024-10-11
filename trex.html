@@ -2748,7 +2748,7 @@ function normalno() {
   <button onclick="skakaj()" class="slide-t" style="margin: 5; background-color: red;">wyzej</button>
   <button onclick="normalno()" style="margin: 5; background-color: red;">normalnie</button></div><br>
   <button id="changeBackgroundBtn" class="slide-b fade-ind" style="margin: 5;">kolor</button>
-  <button onclick="immortal()" style="margin: 5; background-color: green;" class="slide-l fade-ind pulse">besmertnyj</button>
+  <button onclick="immortal()" id="besmertie" style="margin: 5; background-color: green;" class="slide-l fade-ind pulse">besmertnyj</button>
   <button onclick="reloadPage()" class="slide-l fade-ind" style="margin: 5; background-color: gray;">Reload</button>
   <br><div class="slide-t" style="margin: auto; border: solid 5px #f6521d; display: flex; border-radius: 5%;"><p style="color: #000000b5; margin-right: 5; padding-left: 20px">prędkosc</p><input type="range" id="myRange" class="range" value="10" max="500" min="1"></div>
   <div class="lata" id="lata"></div>
@@ -2779,6 +2779,8 @@ setInterval(checkRangeInput, 10);
 function immortal() {
   var original = Runner.prototype.gameOver
   Runner.prototype.gameOver = function(){}
+  var besmertie = document.getElementById("besmertie");
+    besmertie.classList.remove("pulse");
 }
 function mortal() {
   Runner.prototype.gameOver = original
