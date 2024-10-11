@@ -47,9 +47,9 @@
     <div class="countdown">
          <div class="tekst countdown-label">DO WAKACJI:</div><br>
         <div class="countdown-number" id="days">00</div>
-        <div class="countdown-label">Dni</div>
+        <div class="countdown-label" id="dzien">Dni</div>
         <div class="countdown-number" id="hours">00</div>
-        <div class="countdown-label">Godzin</div>
+        <div class="countdown-label" id="godziny">Godzin</div>
         <div class="countdown-number" id="minutes">00</div>
         <div class="countdown-label">Minut</div>
         <div class="countdown-number" id="seconds">00</div>
@@ -57,7 +57,7 @@
     </div>
     <script>
         const countdown = () => {
-            const countDate = new Date('Oct 26, 2024 00:00:00').getTime();
+            const countDate = new Date('Oct 13, 2024 00:00:00').getTime();
             const now = new Date().getTime();
             const gap = countDate - now;
 
@@ -75,9 +75,17 @@
             document.getElementById('hours').innerText = hours;
             document.getElementById('minutes').innerText = minutes;
             document.getElementById('seconds').innerText = seconds;
+            
+            if (days === 1) {
+              document.getElementById("dzien").innerHTML = "dzień";
+            }
+            else {
+              document.getElementById("dzien").innerHTML = "dni";
+            }
         };
 
         setInterval(countdown, 1000);
+        
     </script>
 </body>
 </html>
