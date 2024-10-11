@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Countdown Timer</title>
+    <meta property="og:title" content="DO WAKACJI...">
+    <meta property="og:description" content="Popatrzaj ile zostalo sie do wakacji">
+    <meta property="og:image" content="https://r.profitroom.pl/elementshotelspa/images/events/thumbs/1920x900/1695381570.AdobeStock_223147682.jpg?updated=2024-09-27_15-40">
+    <meta property="og:site_name" content="MAJNKRAFT">
+    <title>DO WAKACJI...</title>
     <style>
         body {
           
@@ -49,15 +53,15 @@
         <div class="countdown-number" id="days">00</div>
         <div class="countdown-label" id="dzien">Dni</div>
         <div class="countdown-number" id="hours">00</div>
-        <div class="countdown-label" id="godziny">Godzin</div>
+        <div class="countdown-label" id="godzina">Godzin</div>
         <div class="countdown-number" id="minutes">00</div>
-        <div class="countdown-label">Minut</div>
+        <div class="countdown-label" id="minuta">Minut</div>
         <div class="countdown-number" id="seconds">00</div>
-        <div class="countdown-label">Sekund</div>
+        <div class="countdown-label" id="sekunda">Sekund</div>
     </div>
     <script>
         const countdown = () => {
-            const countDate = new Date('Oct 13, 2024 00:00:00').getTime();
+            const countDate = new Date('Oct 26, 2024 00:00:00').getTime();
             const now = new Date().getTime();
             const gap = countDate - now;
 
@@ -76,11 +80,45 @@
             document.getElementById('minutes').innerText = minutes;
             document.getElementById('seconds').innerText = seconds;
             
+            //dni
             if (days === 1) {
-              document.getElementById("dzien").innerHTML = "dzień";
+              document.getElementById("dzien").innerHTML = "Dzień";
             }
             else {
-              document.getElementById("dzien").innerHTML = "dni";
+              document.getElementById("dzien").innerHTML = "Dni";
+            }
+            
+            //minuty
+            if (minutes === 1) {
+              document.getElementById("minuta").innerHTML = "Minuta";
+            }
+            else if (minutes < 5) {
+              document.getElementById("minuta").innerHTML = "Minuty";
+            }
+            else {
+              document.getElementById("minuta").innerHTML = "Minut";
+            }
+            
+            //godziny
+            if (hours === 1) {
+              document.getElementById("godzina").innerHTML = "Godzina";
+            }
+            else if (hours < 5) {
+              document.getElementById("godzina").innerHTML = "Godziny";
+            }
+            else {
+              document.getElementById("godzina").innerHTML = "Godzin";
+            }
+            
+            //sekundy
+            if (seconds === 1) {
+              document.getElementById("sekunda").innerHTML = "Sekunda";
+            }
+            else if (seconds < 5) {
+              document.getElementById("sekunda").innerHTML = "Sekundy";
+            }
+            else {
+              document.getElementById("sekunda").innerHTML = "Sekund";
             }
         };
 
