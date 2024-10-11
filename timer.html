@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Countdown Timer</title>
     <style>
         body {
@@ -37,19 +37,23 @@
             font-size: 1rem;
             flex-wrap: wrap;
         }
+        
+        .tekst {
+          font-size: 2rem;
+        }
     </style>
 </head>
 <body>
     <div class="countdown">
-         <div class="countdown-label">DO WAKACJI:</div><br>
+         <div class="tekst countdown-label">DO WAKACJI:</div><br>
         <div class="countdown-number" id="days">00</div>
-        <div class="countdown-label">Days</div>
+        <div class="countdown-label">Dni</div>
         <div class="countdown-number" id="hours">00</div>
-        <div class="countdown-label">Hours</div>
+        <div class="countdown-label">Godzin</div>
         <div class="countdown-number" id="minutes">00</div>
-        <div class="countdown-label">Minutes</div>
+        <div class="countdown-label">Minut</div>
         <div class="countdown-number" id="seconds">00</div>
-        <div class="countdown-label">Seconds</div>
+        <div class="countdown-label">Sekund</div>
     </div>
     <script>
         const countdown = () => {
