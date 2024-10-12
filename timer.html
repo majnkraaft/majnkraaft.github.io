@@ -104,10 +104,10 @@
             }
             
             //godziny
-            if ((hours === 1) || (hours === 21) || (hours === 31) || (hours === 41) || (hours === 51)) {
+            if ((hours === 1) || (hours === 21)) {
               document.getElementById("godzina").innerHTML = "Godzina";
             }
-            else if (hours < 5) {
+            else if ((hours < 5 && hours > 1) || (hours > 21 && hours < 25)) {
               document.getElementById("godzina").innerHTML = "Godziny";
             }
             
@@ -116,13 +116,13 @@
             }
             
             //sekundy
-            if (seconds === 1) {
+            if ((seconds === 1) || (seconds === 21) || (seconds === 31) || (seconds === 41) || (seconds === 51)) {
               document.getElementById("sekunda").innerHTML = "Sekunda";
             }
             else if (seconds === 0) {
               document.getElementById("sekunda").innerHTML = "Sekund";
             }
-            else if (seconds < 5) {
+            else if ((seconds < 5 && seconds > 1) || (seconds > 21 && seconds < 25) || (seconds > 31 && seconds < 35) || (seconds > 41 && seconds < 45) || (seconds > 51 && seconds < 55)) {
               document.getElementById("sekunda").innerHTML = "Sekundy";
             }
             else {
