@@ -89,7 +89,7 @@
             }
             
             //minuty
-            if (minutes === 1) || (minutes === 21) || (minutes === 31) || (minutes === 41) || (minutes === 51) {
+            if ((minutes === 1) || (minutes === 21) || (minutes === 31) || (minutes === 41) || (minutes === 51)) {
               document.getElementById("minuta").innerHTML = "Minuta";
             }
             else if (minutes === 0) {
@@ -104,15 +104,13 @@
             }
             
             //godziny
-            if (hours === 1) {
+            if ((hours === 1) || (hours === 21) || (hours === 31) || (hours === 41) || (hours === 51)) {
               document.getElementById("godzina").innerHTML = "Godzina";
             }
             else if (hours < 5) {
               document.getElementById("godzina").innerHTML = "Godziny";
             }
-            else if (hours === 0) {
-              document.getElementById("godzina").innerHTML = "Godzin";
-            }
+            
             else {
               document.getElementById("godzina").innerHTML = "Godzin";
             }
