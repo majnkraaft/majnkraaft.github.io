@@ -89,13 +89,14 @@
             }
             
             //minuty
-            if (minutes === 1) {
+            if (minutes === 1) || (minutes === 21) || (minutes === 31) || (minutes === 41) || (minutes === 51) {
               document.getElementById("minuta").innerHTML = "Minuta";
             }
             else if (minutes === 0) {
               document.getElementById("minuta").innerHTML = "Minut";
             }
-            else if (minutes < 5) {
+            else if ((minutes < 5 && minutes > 1) || (minutes > 21 && minutes < 25) || (minutes > 31 && minutes < 35) ){
+            else if ((minutes < 5 && minutes > 1) || (minutes > 21 && minutes < 25) || (minutes > 31 && minutes < 35) || (minutes > 41 && minutes < 45) || (minutes > 51 && minutes < 55)){
               document.getElementById("minuta").innerHTML = "Minuty";
             }
             else {
