@@ -33,6 +33,29 @@
             cursor: pointer;
             height: 20px;*/
           }
+          
+        .countdown {
+            
+            gap: 20px;
+            text-align: center;
+            width: 100vw;
+            height: 50%;
+        }
+
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: bold;
+            flex-wrap: wrap;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .tekst {
+          font-size: 2rem;
+        }
     </style>
 </head>
 <body>
@@ -44,15 +67,6 @@
         </div>
     </div>
 
-    <script>
-        function acceptCookies() {
-            document.getElementById('cookie-consent').style.display = 'none';
-            // Set a cookie here if you want
-        }
-
-        function closeConsent() {
-            document.getElementById('cookie-consent').style.display = 'none';
-        }
-    </script>
+    <script src="timer.js"></script>
 </body>
 </html>
