@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #f4f4f4;
+            padding: 15px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #cookie-consent button {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .close-btn {
+            background-color: transparent;
+            color: #0078d4;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cookie-consent">
+        <span>We use cookies to improve your experience. By using our website, you agree to our use of cookies.</span>
+        <div>
+            <button onclick="acceptCookies()">Accept</button>
+            <button class="close-btn" onclick="closeConsent()">×</button>
+        </div>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            document.getElementById('cookie-consent').style.display = 'none';
+            // Set a cookie here if you want
+        }
+
+        function closeConsent() {
+            document.getElementById('cookie-consent').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
