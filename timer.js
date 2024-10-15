@@ -1,3 +1,12 @@
+function hideCookieConsent() {
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+    document.getElementById('cookie-consent').style.display = 'none';
+  }
+}
+
+hideCookieConsent();
+
+
 function acceptCookies() {
             document.getElementById('cookie-consent').style.display = 'none';
             // Set a cookie here if you want
