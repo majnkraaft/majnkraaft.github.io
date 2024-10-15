@@ -1,0 +1,15 @@
+# Cache all HTML files for 1 day
+/* 
+  Cache-Control: max-age=86400
+
+# Cache images for 1 week
+/*.jpg 
+  Cache-Control: max-age=2592000
+/*.png 
+  Cache-Control: max-age=2592000
+/*.jpeg
+  Cache-Control: max-age=2592000
+
+# Cache JavaScript files for 1 day
+/*.js 
+  Cache-Control: max-age=86400
