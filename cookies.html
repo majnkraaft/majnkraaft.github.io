@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
+        /*body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-        }
+        }*/
         #cookie-consent {
             background-color: #f4f4f4;
             padding: 15px;
@@ -65,9 +65,17 @@
         .tekst {
           font-size: 2rem;
         }
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh; /* Full viewport height to center vertically */
+        }
+
     </style>
 </head>
 <body>
+   <div class="container">
     <div id="cookie-consent">
       <div class="countdown">
          <div class="tekst countdown-label">DO WAKACJI:</div><br>
@@ -87,6 +95,7 @@
             
         </div>
     </div>
+  </div>
 
     <script src="timer.js"></script>
 </body>
