@@ -76,6 +76,11 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
   animation: fade-in 5s ease;
 }
 
+/* Initially blur everything */
+        .blurred *:not(#cookie-consent) {
+            filter: blur(10px);
+        }
+
         #cookie-consent {
           position: fixed;
             background-color: #f4f4f4;
@@ -505,7 +510,7 @@ KONIEC STRONY (tu wiecej nie ma co patrzec)</div>	<!-- #site-info -->
         })(jQuery);
         </script>
       <script defer src='https://cdn.printfriendly.com/printfriendly.js'></script>
-            
+            <script src="timer.js"></script>
             <script type="text/javascript" id="tempera-frontend-js-extra">
 /* <![CDATA[ */
 var tempera_settings = {"mobile":"1","fitvids":"1","contentwidth":"900"};
