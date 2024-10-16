@@ -1,6 +1,7 @@
 function hideCookieConsent() {
   if (/Mobi|Android/i.test(navigator.userAgent)) {
     document.getElementById('cookie-consent').style.display = 'none';
+    document.body.classList.remove('blurred')"
   }
 }
 
@@ -9,11 +10,13 @@ hideCookieConsent();
 
 function acceptCookies() {
             document.getElementById('cookie-consent').style.display = 'none';
+            document.body.classList.remove('blurred')"
             // Set a cookie here if you want
         }
 
         function closeConsent() {
             document.getElementById('cookie-consent').style.display = 'none';
+            document.body.classList.remove('blurred')"
         }
         
 const countdown = () => {
