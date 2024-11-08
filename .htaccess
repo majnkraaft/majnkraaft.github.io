@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/ekonomia$
+RewriteRule ^(.*)$ /nic [R=301,L]
