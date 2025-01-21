@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Current Month</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="month-display"></h1>
+    </div>
+    
+    <script>
+        function checkMonth() {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            const currentMonthIndex = new Date().getMonth();
+            const currentMonthNumber = currentMonthIndex + 1;
+            const currentMonthName = months[currentMonthIndex];
+            const message = `${currentMonthName} is ${currentMonthNumber}`;
+
+            return message;
+        }
+
+        document.getElementById('month-display').textContent = checkMonth();
+    </script>
+</body>
+</html>
