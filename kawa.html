@@ -40,22 +40,24 @@
 }
 
 // Przykład użycia:
-let kapitalPoczatkowy = 5; // kubkow
-let stopaProcentowa = 1; // 5%
-let czasTrwania = 8; // lata
 
-let wynik = obliczProcentSkladany(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
-console.log('Całkowita wartość inwestycji:', wynik.toFixed(0), 'zł');
+
+let tamtyrok = 8;
 
         function checkMonth() {
             const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
             const currentMonthIndex = new Date().getMonth();
             const currentMonthNumber = currentMonthIndex + 1;
             const currentMonthName = months[currentMonthIndex];
-            const message = wynik * currentMonthNumber;
+            let kapitalPoczatkowy = 5; // kubkow
+let stopaProcentowa = 1; // 100%
+let czasTrwania = 8 + currentMonthNumber; // lat
 
-
-            return message;
+let wynik = obliczProcentSkladany(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
+console.log('Całkowita wartość inwestycji:', wynik.toFixed(0), 'zł');
+            
+            const messagesklad = wynik;
+            return messagesklad;
         }
 
         document.getElementById('month-display').textContent = checkMonth() + " kawów";
