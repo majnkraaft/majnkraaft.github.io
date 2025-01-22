@@ -40,6 +40,10 @@
   return P * Math.pow((1 + R), T);
 }
 
+function obliczProcentProsty(P, R, T) {
+  return P * (1 + R * T);
+}
+
         function checkMonth() {
             const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
             const currentMonthIndex = new Date().getMonth();
@@ -51,6 +55,8 @@ let czasTrwania = 8 + currentMonthNumber; // lat
 
 let wynik = obliczProcentSkladany(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
 console.log('Całkowita wartość inwestycji:', wynik.toFixed(0), 'zł');
+
+let prosty = obliczProcentProsty(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
             
             setInterval(() => {
       let radio1 = document.getElementById('radio1').checked;
@@ -61,8 +67,10 @@ console.log('Całkowita wartość inwestycji:', wynik.toFixed(0), 'zł');
             return message;
       } else if (radio2) {
         console.log('Radio 2 is checked');
+        let message = prosty
       } else {
         console.log('No radio button is checked');
+        let message = "↑ wybierz JAKI procent ↑"
       }
     }, 1000); // 1000 milliseconds = 1 second
             
