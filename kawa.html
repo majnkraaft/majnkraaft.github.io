@@ -35,20 +35,8 @@
  * @param {number} T - Czas trwania inwestycji (w latach)
  * @returns {number} - Całkowita wartość inwestycji po czasie T
  */
- function obliczProcentSkladany(P, R, T) {
-  return P * Math.pow((1 + R / n), T);
-}
+ 
 
-// Przykład użycia:
-let kapitalPoczatkowy = 1000; // €
-let stopaProcentowa = 0.05; // 5%
-let czasTrwania = 5; // lata
-
-let wynik = obliczProcentSkladany(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
-console.log('Całkowita wartość inwestycji:', wynik.toFixed(0), 'zł');
-
-    </script>
-    <script>
         function checkMonth() {
             const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
             const currentMonthIndex = new Date().getMonth();
@@ -56,6 +44,17 @@ console.log('Całkowita wartość inwestycji:', wynik.toFixed(0), 'zł');
             const currentMonthName = months[currentMonthIndex];
             const message = `${currentMonthName} is ${currentMonthNumber}`;
 
+            function obliczProcentSkladany(P, R, T) {
+  return P * Math.pow((1 + R), T);
+}
+
+// Przykład użycia:
+let kapitalPoczatkowy = 5; // kubkow
+let stopaProcentowa = 1; // 5%
+let czasTrwania = 8; // lata
+
+let wynik = obliczProcentSkladany(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
+console.log('Całkowita wartość inwestycji:', wynik.toFixed(0), 'zł');
             return message;
         }
 
