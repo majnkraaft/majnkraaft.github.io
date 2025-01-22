@@ -22,8 +22,8 @@
 </head>
 <body>
     <div class="container">
-        <input type="radio" name="options" id="radio1" value="1"> Radio 1<br>
-  <input type="radio" name="options" id="radio2" value="2"> Radio 2<br>
+        <input type="radio" name="options" id="radio1" value="1"> Procent prosty<br>
+  <input type="radio" name="options" id="radio2" value="2"> Procent składany<br>
         <h1 id="month-display"></h1>
     </div>
     
@@ -38,7 +38,7 @@
             return message;
         }
 
-        document.getElementById('month-display').textContent = checkMonth();
+        document.getElementById('month-display').textContent = checkMonth() + " kawów";
     </script>
   <script>
     setInterval(() => {
