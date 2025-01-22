@@ -28,6 +28,27 @@
     </div>
     
     <script>
+      /**
+ * Funkcja obliczająca wartość inwestycji przy procentach składanych.
+ * @param {number} P - Kapitał początkowy
+ * @param {number} R - Stopa procentowa (w formie dziesiętnej, np. 0.05 dla 5%)
+ * @param {number} T - Czas trwania inwestycji (w latach)
+ * @returns {number} - Całkowita wartość inwestycji po czasie T
+ */
+ function obliczProcentSkladany(P, R, T) {
+  return P * Math.pow((1 + R / n), T);
+}
+
+// Przykład użycia:
+let kapitalPoczatkowy = 1000; // €
+let stopaProcentowa = 0.05; // 5%
+let czasTrwania = 5; // lata
+
+let wynik = obliczProcentSkladany(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
+console.log('Całkowita wartość inwestycji:', wynik.toFixed(0), 'zł');
+
+    </script>
+    <script>
         function checkMonth() {
             const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
             const currentMonthIndex = new Date().getMonth();
