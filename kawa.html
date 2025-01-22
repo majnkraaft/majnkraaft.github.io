@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two Radio Buttons</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="radio" name="options" id="radio1" value="1"> Radio 1<br>
+  <input type="radio" name="options" id="radio2" value="2"> Radio 2<br>
+        <h1 id="month-display"></h1>
+    </div>
+    
+    <script>
+        function checkMonth() {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            const currentMonthIndex = new Date().getMonth();
+            const currentMonthNumber = currentMonthIndex + 1;
+            const currentMonthName = months[currentMonthIndex];
+            const message = `${currentMonthName} is ${currentMonthNumber}`;
+
+            return message;
+        }
+
+        document.getElementById('month-display').textContent = checkMonth();
+    </script>
+  <script>
+    setInterval(() => {
+      let radio1 = document.getElementById('radio1').checked;
+      let radio2 = document.getElementById('radio2').checked;
+
+      if (radio1) {
+        console.log('Radio 1 is checked');
+      } else if (radio2) {
+        console.log('Radio 2 is checked');
+      } else {
+        console.log('No radio button is checked');
+      }
+    }, 1000); // 1000 milliseconds = 1 second
+  </script>
+</body>
+</html>
