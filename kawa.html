@@ -28,6 +28,7 @@
     </div>
     
     <script>
+    
       /**
  * Funkcja obliczająca wartość inwestycji przy procentach składanych.
  * @param {number} P - Kapitał początkowy
@@ -38,11 +39,6 @@
              function obliczProcentSkladany(P, R, T) {
   return P * Math.pow((1 + R), T);
 }
-
-// Przykład użycia:
-
-
-let tamtyrok = 8;
 
         function checkMonth() {
             const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -56,25 +52,25 @@ let czasTrwania = 8 + currentMonthNumber; // lat
 let wynik = obliczProcentSkladany(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
 console.log('Całkowita wartość inwestycji:', wynik.toFixed(0), 'zł');
             
-            const messagesklad = wynik;
-            return messagesklad;
-        }
-
-        document.getElementById('month-display').textContent = checkMonth() + " kawów";
-    </script>
-  <script>
-    setInterval(() => {
+            setInterval(() => {
       let radio1 = document.getElementById('radio1').checked;
       let radio2 = document.getElementById('radio2').checked;
-
-      if (radio1) {
+            if (radio1) {
         console.log('Radio 1 is checked');
+        let message = wynik;
+            return message;
       } else if (radio2) {
         console.log('Radio 2 is checked');
       } else {
         console.log('No radio button is checked');
       }
     }, 1000); // 1000 milliseconds = 1 second
-  </script>
+            
+        }
+
+        document.getElementById('month-display').textContent = checkMonth() + " kawów";
+    </script>
+
+      
 </body>
 </html>
