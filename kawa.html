@@ -67,10 +67,12 @@ let prosty = obliczProcentProsty(kapitalPoczatkowy, stopaProcentowa, czasTrwania
             return message;
       } else if (radio2) {
         console.log('Radio 2 is checked');
-        let message = prosty
+        let message = prosty;
+            return message
       } else {
         console.log('No radio button is checked');
         let message = "↑ wybierz JAKI procent ↑"
+          return message
       }
     }, 1000); // 1000 milliseconds = 1 second
             
