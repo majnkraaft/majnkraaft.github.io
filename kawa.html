@@ -63,11 +63,11 @@ let prosty = obliczProcentProsty(kapitalPoczatkowy, stopaProcentowa, czasTrwania
       let radio2 = document.getElementById('radio2').checked;
             if (radio1) {
         console.log('Radio 1 is checked');
-            let message = wynik + " kawów";
+            let message = prosty + " kawów";
             document.getElementById('month-display').textContent = message;
         } else if (radio2) {
             console.log('Radio 2 is checked');
-            let message = prosty + " kawów";
+            let message = wynik + " kawów";
             document.getElementById('month-display').textContent = message;
         } else {
             console.log('No radio button is checked');
