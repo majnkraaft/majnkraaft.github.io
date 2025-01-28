@@ -256,6 +256,7 @@ function krutoj() {
   krutoj.play()
 }
 
+
 function anphoton() {
   var anphoton = document.getElementById('anphoton');
   var dymok = document.getElementById('doscpalic');
