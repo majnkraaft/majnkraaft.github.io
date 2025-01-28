@@ -171,6 +171,7 @@ function muzyczka() {
   var swadba = document.getElementById('swadba');
   var terorist = document.getElementById('terorist');
   var krutoj = document.getElementById('krutoj');
+  var anphoton = document.getElementById('anphoton');
   if (teraria.muted === false) {
     teraria.muted = true;
   }
@@ -180,11 +181,13 @@ function muzyczka() {
     swadba.muted = true;
     terorist.muted = true;
     krutoj.muted = true;
+    anphoton.muted = true;
   }
 }
 
 function kurilszczik() {
   var dymok = document.getElementById('doscpalic');
+  var anphoton = document.getElementById('anphoton');
   var teraria = document.getElementById('teraria');
   var swadba = document.getElementById('swadba');
   var terorist = document.getElementById('terorist');
@@ -195,6 +198,7 @@ function kurilszczik() {
     swadba.muted = true;
     terorist.muted = true;
     krutoj.muted = true;
+    anphoton.muted = true;
     dymok.play()
   }
   else {
@@ -205,6 +209,7 @@ function kurilszczik() {
 }
 
 function swadba() {
+  var anphoton = document.getElementById('anphoton');
   var dymok = document.getElementById('doscpalic');
   var teraria = document.getElementById('teraria');
   var swadba = document.getElementById('swadba');
@@ -215,10 +220,12 @@ function swadba() {
   teraria.muted = true;
   dymok.muted = true;
   krutoj.muted = true;
+  anphoton.muted = true;
   swadba.play()
 }
   
 function terorist() {
+  var anphoton = document.getElementById('anphoton');
   var dymok = document.getElementById('doscpalic');
   var teraria = document.getElementById('teraria');
   var swadba = document.getElementById('swadba');
@@ -229,10 +236,12 @@ function terorist() {
   teraria.muted = true;
   dymok.muted = true;
   krutoj.muted = true;
+  anphoton.muted = true;
   terorist.play()
 }
 
 function krutoj() {
+  var anphoton = document.getElementById('anphoton');
   var dymok = document.getElementById('doscpalic');
   var teraria = document.getElementById('teraria');
   var swadba = document.getElementById('swadba');
@@ -242,8 +251,25 @@ function krutoj() {
   terorist.muted = true;
   teraria.muted = true;
   dymok.muted = true;
+  anphoton.muted = true;
   krutoj.muted = false;
   krutoj.play()
+}
+
+function anphoton() {
+  var anphoton = document.getElementById('anphoton');
+  var dymok = document.getElementById('doscpalic');
+  var teraria = document.getElementById('teraria');
+  var swadba = document.getElementById('swadba');
+  var terorist = document.getElementById('terorist');
+  var krutoj = document.getElementById('krutoj');
+  swadba.muted = true;
+  terorist.muted = true;
+  teraria.muted = true;
+  dymok.muted = true;
+  krutoj.muted = true;
+  anphoton.muted = false;
+  anphoton.play()
 }
   
 function trewoga() {
