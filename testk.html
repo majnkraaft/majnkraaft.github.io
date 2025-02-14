@@ -25,7 +25,7 @@
     <div class="container">
         <input type="radio" name="options" id="radio1" value="1"> Procent prosty<br>
         <input type="radio" name="options" id="radio2" value="2"> Procent składany<br>
-        <div class="slide-t" style="margin: 20px auto -30px auto; border: solid 5px #f0f0f0d6; display: flex; border-radius: 15%;"><p style="color: #000000b5; margin-right: 5px; padding-left: auto; margin-left: 10px;">ile: </p><p id="ileprocwybr"></p><input type="range" id="myRange" class="range" style="margin-right: 100" value="5" max="100" min="1"></div><br>
+        <div class="slide-t" style="margin: 20px auto -30px auto; border: solid 5px #f0f0f0d6; display: flex; border-radius: 15%;"><p style="color: #000000b5; margin-right: 5px; padding-left: auto; margin-left: 10vw;">ile: </p><p id="ileprocwybr"></p><input type="range" id="myRange" class="range" style="margin-right: 100" value="5" max="100" min="1"></div><br>
         <h1 id="month-display">↑ wybierz JAKI procent ↑</h1>
         <img src="/to-go-coffee.svg">
     </div>
@@ -42,23 +42,25 @@
       function checkMonth() {
           const currentMonthIndex = new Date().getMonth();
           const currentMonthNumber = currentMonthIndex + 1;
+          const rangeInput = document.getElementById('myRange');
+          let procenty = rangeInput.value / 100;
           
           let kapitalPoczatkowy = 5; // kubków
-          let stopaProcentowa = 1; // 100%
+          let stopaProcentowa = procenty; // 100%
           let czasTrwania = 8 + currentMonthNumber; // lat
 
           let wynik = obliczProcentSkladany(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
           let prosty = obliczProcentProsty(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
-
+          
           function updateDisplay() {
               let radio1 = document.getElementById('radio1').checked;
               let radio2 = document.getElementById('radio2').checked;
               let message = "↑ wybierz JAKI procent ↑";
               
               if (radio1) {
-                  message = (prosty * 26).toFixed(0) + " kawów";
+                  message = prosty.toFixed(0) + " kawów";
               } else if (radio2) {
-                  message = (wynik * 26).toFixed(0) + " kawów";
+                  message = wynik.toFixed(0) + " kawów";
               }
               
               document.getElementById('month-display').textContent = message;
@@ -70,8 +72,6 @@
           
           function upileprocwybrano() { const rangeInput = document.getElementById('myRange');
             console.log('Range input value:', rangeInput.value);
-              
-              
               document.getElementById('ileprocwybr').textContent = rangeInput.value + " %";
           }
           
