@@ -23,7 +23,7 @@
 </head>
 <body>
     <div class="container">
-        <input type="radio" name="options" id="radio1" value="1"> Procent prosty<br>
+        <input type="radio" name="options" id="radio1" value="1" checked="true"> Procent prosty<br>
         <input type="radio" name="options" id="radio2" value="2"> Procent składany<br>
         
         <div class="slide-t" style="margin: 20px auto -30px auto; border: solid 5px #f0f0f0d6; display: flex; border-radius: 15%;">
@@ -85,6 +85,7 @@
       document.getElementById('radio2').addEventListener('change', updateDisplay);
       document.getElementById('myRange').addEventListener('input', upileprocwybrano);
 
+     updateDisplay()
       upileprocwybrano(); // Initialize the display with the default slider value
     </script>
 
