@@ -17,70 +17,76 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <input type="radio" name="options" id="radio1" value="1"> Procent prosty<br>
-  <input type="radio" name="options" id="radio2" value="2"> Procent składany<br>
-        <h1 id="month-display"></h1><img src="/to-go-coffee.svg">
+        <input type="radio" name="options" id="radio2" value="2"> Procent składany<br>
+        
+        <div class="slide-t" style="margin: 20px auto -30px auto; border: solid 5px #f0f0f0d6; display: flex; border-radius: 15%;">
+            <p style="color: #000000b5; margin-right: 5px; padding-left: auto; margin-left: 10vw;">ile: </p>
+            <p id="ileprocwybr"></p>
+            <input type="range" id="myRange" class="range" style="margin-right: 100" value="5" max="100" min="1">
+        </div><br>
+        
+        <h1 id="month-display">↑ wybierz JAKI procent ↑</h1>
+        <img src="/to-go-coffee.svg">
     </div>
     
     <script>
-    
-      /**
- * Funkcja obliczająca wartość inwestycji przy procentach składanych.
- * @param {number} P - Kapitał początkowy
- * @param {number} R - Stopa procentowa (w formie dziesiętnej, np. 0.05 dla 5%)
- * @param {number} T - Czas trwania inwestycji (w latach)
- * @returns {number} - Całkowita wartość inwestycji po czasie T
- */
-             function obliczProcentSkladany(P, R, T) {
-  return P * Math.pow((1 + R), T);
-}
-
-function obliczProcentProsty(P, R, T) {
-  return P * (1 + R * T);
-}
-
-        function checkMonth() {
-            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-            const currentMonthIndex = new Date().getMonth();
-            const currentMonthNumber = currentMonthIndex + 1;
-            const currentMonthName = months[currentMonthIndex];
-            let kapitalPoczatkowy = 5; // kubkow
-let stopaProcentowa = 1; // 100%
-let czasTrwania = 8 + currentMonthNumber; // lat
-
-let wynik = obliczProcentSkladany(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
-console.log('Całkowita wartość inwestycji:', wynik.toFixed(0), 'zł');
-
-let prosty = obliczProcentProsty(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
-            
-            setInterval(() => {
-      let radio1 = document.getElementById('radio1').checked;
-      let radio2 = document.getElementById('radio2').checked;
-            if (radio1) {
-        console.log('Radio 1 is checked');
-            let message = prosty + " kawów";
-            document.getElementById('month-display').textContent = message;
-        } else if (radio2) {
-            console.log('Radio 2 is checked');
-            let message = wynik + " kawów";
-            document.getElementById('month-display').textContent = message;
-        } else {
-            console.log('No radio button is checked');
-            let message = "↑ wybierz JAKI procent ↑";
-            document.getElementById('month-display').textContent = message
+      function obliczProcentSkladany(P, R, T) {
+          return P * Math.pow((1 + R), T);
       }
-    }, 250); // 1000 milliseconds = 1 second
-            
-        }
 
-        document.getElementById('month-display').textContent = checkMonth() * 26 + " kawów";
+      function obliczProcentProsty(P, R, T) {
+          return P * (1 + R * T);
+      }
+
+      function updateDisplay() {
+          let kapitalPoczatkowy = 5;
+          let currentMonthIndex = new Date().getMonth();
+          let currentMonthNumber = currentMonthIndex + 1;
+          let stopaProcentowa = document.getElementById('myRange').value / 100;
+          let czasTrwania = 8 + currentMonthNumber;
+
+          let wynik = obliczProcentSkladany(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
+          let prosty = obliczProcentProsty(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
+
+          console.log("Kapitał początkowy:", kapitalPoczatkowy);
+          console.log("Stopa procentowa:", stopaProcentowa);
+          console.log("Czas trwania:", czasTrwania);
+          console.log("Wynik procent składany:", wynik);
+          console.log("Wynik procent prosty:", prosty);
+
+          let radio1 = document.getElementById('radio1').checked;
+          let radio2 = document.getElementById('radio2').checked;
+          let message = "↑ wybierz JAKI procent ↑";
+
+          if (radio1) {
+              message = prosty.toFixed(0) + " kawów";
+          } else if (radio2) {
+              message = wynik.toFixed(0) + " kawów";
+          }
+
+          document.getElementById('month-display').textContent = message;
+      }
+
+      function upileprocwybrano() {
+          let rangeValue = document.getElementById('myRange').value;
+          document.getElementById('ileprocwybr').textContent = rangeValue + " %";
+          console.log("Nowa wartość suwaka:", rangeValue);
+          updateDisplay(); // Update the display when slider moves
+      }
+
+      document.getElementById('radio1').addEventListener('change', updateDisplay);
+      document.getElementById('radio2').addEventListener('change', updateDisplay);
+      document.getElementById('myRange').addEventListener('input', upileprocwybrano);
+
+      upileprocwybrano(); // Initialize the display with the default slider value
     </script>
 
-      
 </body>
 </html>
