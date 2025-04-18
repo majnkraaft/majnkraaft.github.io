@@ -1,9 +1,9 @@
-function hideCookieConsent() {
-  if (/Mobi|Android/i.test(navigator.userAgent)) {
-    document.getElementById('cookie-consent').style.display = 'none';
-    document.getElementById('cala').classList.remove('blurred');
-  }
-}
+//function hideCookieConsent() {
+ // if (/Mobi|Android/i.test(navigator.userAgent)) {
+ //   document.getElementById('cookie-consent').style.display = 'none';
+ //   document.getElementById('cala').classList.remove('blurred');
+//  }
+//}
 
 hideCookieConsent();
 
