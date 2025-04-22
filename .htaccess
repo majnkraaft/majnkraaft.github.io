@@ -1,0 +1,4 @@
+# Allow access only from your IP
+Order Deny,Allow
+Deny from all
+Allow from 37.0.249.107
