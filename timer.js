@@ -20,7 +20,7 @@ function acceptCookies() {
         }
         
 const countdown = () => {
-            const countDate = new Date('Jun 23, 2025 13:00:00').getTime();
+            const countDate = new Date('Jun 20, 2025 13:00:00').getTime();
             const now = new Date().getTime();
             const gap = countDate - now;
 
