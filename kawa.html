@@ -58,8 +58,7 @@
     const now = new Date();
 
     const yearsDiff = now.getFullYear() - startDate.getFullYear();
-    const monthsDiff = now.getMonth() - startDate.getMonth();
-  
+   const monthsDiff = now.getMonth() - startDate.getMonth();
 
   let totalMonths = yearsDiff * 12 + monthsDiff;
 //liczy miesiący i lata
@@ -108,22 +107,26 @@
      upileprocwybrano(); // Initialize the display with the default slider value
       
       if ((monthsDiff === 1) || (monthsDiff === 21) || (monthsDiff === 31) || (monthsDiff === 41) || (monthsDiff === 51)) {
-              miesiac = "miesiąc";
+              miesiac = " miesiąc";
             }
             else if (monthsDiff === 0) {
-              miesiac = " ";
+              miesiac = "";
             }
             
             else {
-              miesiac = "miesięcy";
+              miesiac = " miesięcy";
             }
      //rok czy lat czy lata
+  
+     
+     if (monthsDiff === 0) {
+       monthsDiff = "tak dużo! :O"
+     };//to żeby posle "i" psuto nie bylo
       
-      //Ile lat przeszło
       function ilePrzeszlo() {
        document.getElementById('ileLatPrzeszlo').textContent = "Czekami " + yearsDiff + rok + " i " + monthsDiff + miesiac;
       }
-      ilePrzeszlo()
+      ilePrzeszlo()//ile lat przeszlo
     </script>
 
 </body>
