@@ -37,8 +37,10 @@
         <div><h1 style="margin-bottom: 0;" id="month-display">↑ wybierz JAKI procent ↑</h1>
         <p style="font-size: 1.4rem; margin-top: 0;">(każdemu)</p></div>
         <img src="/to-go-coffee.svg">
-        <p style="font-size: 1.6rem;">Przeszło </p>
-        <p id="ileLatPrzeszlo"></p>
+        <div>
+        <p style="font-size: 1.6rem; margin-right: 5px; margin-left: 0.5vw;">Przeszło </p>
+        <p id="ileLatPrzeszlo" style="font-size: 1.6rem;"></p>
+        </div>
     </div>
     
     <script>
@@ -106,6 +108,7 @@
      updateDisplay();
      upileprocwybrano(); // Initialize the display with the default slider value
       
+     //rok czy lat czy lata
       
       //Ile lat przeszło
       function ilePrzeszlo() {
