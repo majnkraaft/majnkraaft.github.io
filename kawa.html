@@ -44,25 +44,38 @@
     <script>
       function obliczProcentSkladany(P, R, T) {
           return P * Math.pow((1 + R), T);
-      }
+      } 
+      //oblicza procenty skladane
 
       function obliczProcentProsty(P, R, T) {
           return P * (1 + R * T);
       }
+      //nu oblicza procenty proste
+
+
+    const startDate = new Date("2024-05-01"); // May 1 is a safe default
+    const now = new Date();
+
+    const yearsDiff = now.getFullYear() - startDate.getFullYear();
+    const monthsDiff = now.getMonth() - startDate.getMonth();
+  
+
+  let totalMonths = yearsDiff * 12 + monthsDiff;
+//liczy miesiący i lata
+
+
+
 
       function updateDisplay() {
           let kapitalPoczatkowy = 5;
-          let currentMonthIndex = new Date().getMonth();
-          let currentMonthNumber = currentMonthIndex + 1;
           let stopaProcentowa = document.getElementById('myRange').value / 100;
-          let czasTrwania = 8 + currentMonthNumber;
 
-          let wynik = obliczProcentSkladany(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
-          let prosty = obliczProcentProsty(kapitalPoczatkowy, stopaProcentowa, czasTrwania);
+          let wynik = obliczProcentSkladany(kapitalPoczatkowy, stopaProcentowa, totalMonths);
+          let prosty = obliczProcentProsty(kapitalPoczatkowy, stopaProcentowa, totalMonths);
 
           console.log("Kapitał początkowy:", kapitalPoczatkowy);
           console.log("Stopa procentowa:", stopaProcentowa);
-          console.log("Czas trwania:", czasTrwania);
+          console.log("Czas trwania:", totalMonths);
           console.log("Wynik procent składany:", wynik);
           console.log("Wynik procent prosty:", prosty);
 
@@ -90,13 +103,13 @@
       document.getElementById('radio2').addEventListener('change', updateDisplay);
       document.getElementById('myRange').addEventListener('input', upileprocwybrano);
 
-     updateDisplay()
-      upileprocwybrano(); // Initialize the display with the default slider value
+     updateDisplay();
+     upileprocwybrano(); // Initialize the display with the default slider value
       
       
       //Ile lat przeszło
       function ilePrzeszlo() {
-       console.log(currentMonthNumber)
+       document.getElementById('ileLatPrzeszlo').textContent = yearsDiff + " " + monthsDiff;
       }
       ilePrzeszlo()
     </script>
