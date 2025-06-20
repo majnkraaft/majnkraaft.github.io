@@ -107,11 +107,21 @@
      updateDisplay();
      upileprocwybrano(); // Initialize the display with the default slider value
       
+      if ((monthsDiff === 1) || (monthsDiff === 21) || (monthsDiff === 31) || (monthsDiff === 41) || (monthsDiff === 51)) {
+              miesiac = "miesiąc";
+            }
+            else if (monthsDiff === 0) {
+              miesiac = " ";
+            }
+            
+            else {
+              miesiac = "miesięcy";
+            }
      //rok czy lat czy lata
       
       //Ile lat przeszło
       function ilePrzeszlo() {
-       document.getElementById('ileLatPrzeszlo').textContent = "Przeszło " + yearsDiff + " rok i " + monthsDiff + "miesiąc";
+       document.getElementById('ileLatPrzeszlo').textContent = "Czekami " + yearsDiff + rok + " i " + monthsDiff + miesiac;
       }
       ilePrzeszlo()
     </script>
