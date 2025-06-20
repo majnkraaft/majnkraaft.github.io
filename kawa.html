@@ -118,6 +118,17 @@
             }
      //rok czy lat czy lata
   
+     if ((yearsDiff === 1) || (yearsDiff === 21) || (yearsDiff === 31) || (yearsDiff === 41) || (yearsDiff === 51)) {
+              rok = "rok"
+            }
+            
+            else if ((yearsDiff < 5 && yearsDiff > 1) || (yearsDiff > 21 && yearsDiff < 25) || (yearsDiff > 31 && yearsDiff < 35) || (yearsDiff > 41 && yearsDiff < 45) || (yearsDiff > 51 && yearsDiff < 55)) {
+              rok = "lata"
+            }
+            else {
+              rok = "lat"
+            }
+     
      
      if (monthsDiff === 0) {
        monthsDiff = "tak dużo! :O"
