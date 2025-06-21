@@ -25,16 +25,16 @@
 </head>
 <body>
     <div class="container">
-        <input type="radio" name="options" id="radio1" value="1" checked="true"> Procent prosty<br>
-        <input type="radio" name="options" id="radio2" value="2"> Procent składany<br>
+        <input type="radio" name="options" id="radio1" value="1" checked="true" style="font-size: clamp(25.6px, 2.7vw, 36px);"> Procent prosty<br>
+        <input type="radio" name="options" id="radio2" value="2" style="font-size: clamp(25.6px, 2.7vw, 36px);"> Procent składany<br>
         
-       <div class="slide-t" style="margin: 20px auto -30px auto; border: solid 5px #f0f0f0d6; border-radius: 15%; display: flex;">
+       <div class="slide-t" style="margin: 20px auto -30px auto; border: solid 5px #f0f0f0d6; border-radius: 15%; display: flex; font-size: clamp(25.6px, 2.7vw, 36px);">
             <p style="color: #000000b5; margin-right: 5px; margin-left: 0.5vw;">ile: </p>
             <p id="ileprocwybr"></p>
             <input type="range" id="myRange" class="range" style="margin-right: 100;" value="10" max="100" min="5">
        </div> <br>
         
-        <div><h1 style="margin-bottom: 0; font-size: clamp(27.5px, 3.1vw, 38px);" id="month-display">↑ wybierz JAKI procent ↑</h1>
+        <div><h1 style="margin-bottom: 0; font-size: clamp(28px, 3.1vw, 38px);" id="month-display">↑ wybierz JAKI procent ↑</h1>
         <p style="font-size: clamp(22.4px, 2.2vw, 33px); margin-top: 0;">(każdemu)</p></div>
         <img src="/to-go-coffee.svg">
         <div>
@@ -87,7 +87,7 @@
               message = prosty.toFixed(0) + " kawów";
           } else if (radio2) {
               message = wynik.toFixed(0) + " kawów";
-          }
+          }//wynik to zlozony proc
 
           document.getElementById('month-display').textContent = message;
       }
