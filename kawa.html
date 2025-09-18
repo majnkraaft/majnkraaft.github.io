@@ -99,8 +99,13 @@
           document.getElementById('month-display').textContent = message;
           
           cena = 0.8
-          iloscKawow = 5
-          document.getElementById('cena').textContent = cena * iloscKawow + " €";  //wpisuji cena kawów
+          if (radio1) {
+              iloscKawow = prosty;
+          } else if (radio2) {
+              iloscKawow = wynik;
+          }// podstawia ilosc kawow
+          
+          document.getElementById('cena').textContent = cena * iloscKawow).toFixed + " €";  //wpisuji cena kawów
       }
 
       function upileprocwybrano() {
