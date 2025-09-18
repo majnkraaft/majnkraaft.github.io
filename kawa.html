@@ -104,8 +104,9 @@
           } else if (radio2) {
               iloscKawow = wynik;
           }// podstawia ilosc kawow
+          cenaKawow = cena * iloscKawow;
           
-          document.getElementById('cena').textContent = (cena * iloscKawow).toFixed(2) + " €";  //wpisuji cena kawów
+          document.getElementById('cena').textContent = cenaKawow.toFixed(2) + " €";  //wpisuji cena kawów
       }
 
       function upileprocwybrano() {
