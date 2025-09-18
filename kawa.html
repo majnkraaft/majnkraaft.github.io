@@ -39,7 +39,12 @@
         <div><h1 style="margin-bottom: 0; font-size: clamp(28px, 3.5vw, 40px);" id="month-display">↑ wybierz JAKI procent ↑</h1>
         <p style="font-size: clamp(22.4px, 2.2vw, 33px); margin-top: 0;">(każdemu)</p></div>
         <img src="/to-go-coffee.svg">
+        <br>
         <div>
+          <p>które będo kosztować</p>
+          <br>
+          <p id="cena"></p>
+        </div><div>
         <em id="ileLatPrzeszlo" style="font-size: clamp(25.6px, 2.7vw, 36px);"></em>
         </div>
     </div>
@@ -92,6 +97,10 @@
           }//wynik to zlozony proc
 
           document.getElementById('month-display').textContent = message;
+          
+          cena = 0.8
+          iloscKawow = 5
+          document.getElementById('cena').textContent = cena * iloscKawow + " €";  //wpisuji cena kawów
       }
 
       function upileprocwybrano() {
@@ -99,6 +108,7 @@
           document.getElementById('ileprocwybr').textContent = rangeValue + " %";
           console.log("Nowa wartość suwaka:", rangeValue);
           updateDisplay(); // Update the display when slider moves
+          
       }
 
       document.getElementById('radio1').addEventListener('change', updateDisplay);
@@ -134,12 +144,13 @@
      
      if (monthsDiff === 0) {
        monthsDiff = "tak dużo! :O"
-     };//to żeby posle "i" psuto nie bylo
+     };//to żeby posle "i" pusto nie bylo
       
       function ilePrzeszlo() {
        document.getElementById('ileLatPrzeszlo').textContent = "Czekami " + yearsDiff + rok + " i " + monthsDiff + miesiac;
       }
       ilePrzeszlo()//ile lat przeszlo
+      
     </script>
 
 </body>
