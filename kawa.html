@@ -40,9 +40,9 @@
         <p style="font-size: clamp(22.4px, 2.2vw, 33px); margin-top: 0;">(każdemu)</p></div>
         <img src="/to-go-coffee.svg">
         <br>
-        <div style="font-size: clamp(18px, 1.7vw, 27px); color: red;">
+        <div style="display: flex; gap: 20px; font-size: clamp(24px, 2.55vw, 34.5px); color: red;">
           <p>cena</p>
-          <span id="cena"></span>
+          <p id="cena"></p>
         </div><div>
         <em id="ileLatPrzeszlo" style="font-size: clamp(25.6px, 2.7vw, 36px);"></em>
         </div>
@@ -95,7 +95,7 @@
               message = wynik.toFixed(0) + " kawów";
           }//wynik to zlozony proc
 
-          document.getElementById('month-display').textContent = message;
+          document.getElementById('month-display').textContent = message;//wpisuji ile kawow
           
           cena = 0.8
           if (radio1) {
@@ -103,7 +103,7 @@
           } else if (radio2) {
               iloscKawow = wynik;
           }// podstawia ilosc kawow
-          cenaKawow = cena * iloscKawow;
+          cenaKawow = cena * iloscKawow;//liczy cena kawow
           
           document.getElementById('cena').textContent = cenaKawow.toFixed(2) + " €";  //wpisuji cena kawów
       }
