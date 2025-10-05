@@ -172,6 +172,7 @@ function muzyczka() {
   var terorist = document.getElementById('terorist');
   var krutoj = document.getElementById('krutoj');
   var anphoton = document.getElementById('anphoton');
+  var czotko = document.getElementById('czotko');
   if (teraria.muted === false) {
     teraria.muted = true;
   }
@@ -182,16 +183,19 @@ function muzyczka() {
     terorist.muted = true;
     krutoj.muted = true;
     anphoton.muted = true;
+    czotko.muted = true;
   }
 }
 
+//jak ciskasz na fotki
 function kurilszczik() {
   var dymok = document.getElementById('doscpalic');
   var anphoton = document.getElementById('anphoton');
   var teraria = document.getElementById('teraria');
   var swadba = document.getElementById('swadba');
   var terorist = document.getElementById('terorist');
- var krutoj = document.getElementById('krutoj'); 
+ var krutoj = document.getElementById('krutoj');
+ var czotko = document.getElementById('czotko');
   if (dymok.muted === true) {
     dymok.muted = false;
     teraria.muted = true;
@@ -199,6 +203,7 @@ function kurilszczik() {
     terorist.muted = true;
     krutoj.muted = true;
     anphoton.muted = true;
+    czotko.muted = true;
     dymok.play()
   }
   else {
@@ -215,15 +220,35 @@ function swadba() {
   var swadba = document.getElementById('swadba');
   var terorist = document.getElementById('terorist');
   var krutoj = document.getElementById('krutoj');
+  var czotko = document.getElementById('czotko');
   swadba.muted = false;
   terorist.muted = true;
   teraria.muted = true;
   dymok.muted = true;
   krutoj.muted = true;
   anphoton.muted = true;
+  czotko.muted = true;
   swadba.play()
 }
-  
+
+function czotko() {
+  var anphoton = document.getElementById('anphoton');
+  var dymok = document.getElementById('doscpalic');
+  var teraria = document.getElementById('teraria');
+  var swadba = document.getElementById('swadba');
+  var terorist = document.getElementById('terorist');
+  var krutoj = document.getElementById('krutoj');
+  var czotko = document.getElementById('czotko');
+  czotko.muted = false;
+  swadba.muted = true;
+  terorist.muted = true;
+  teraria.muted = true;
+  dymok.muted = true;
+  krutoj.muted = true;
+  anphoton.muted = true;
+  czotko.play()
+}
+
 function terorist() {
   var anphoton = document.getElementById('anphoton');
   var dymok = document.getElementById('doscpalic');
@@ -231,12 +256,14 @@ function terorist() {
   var swadba = document.getElementById('swadba');
   var terorist = document.getElementById('terorist');
   var krutoj = document.getElementById('krutoj');
+  var czotko = document.getElementById('czotko');
   swadba.muted = true;
   terorist.muted = false;
   teraria.muted = true;
   dymok.muted = true;
   krutoj.muted = true;
   anphoton.muted = true;
+  czotko.muted = true;
   terorist.play()
 }
 
@@ -247,12 +274,14 @@ function krutoj() {
   var swadba = document.getElementById('swadba');
   var terorist = document.getElementById('terorist');
   var krutoj = document.getElementById('krutoj');
+  var czotko = document.getElementById('czotko');
   swadba.muted = true;
   terorist.muted = true;
   teraria.muted = true;
   dymok.muted = true;
   anphoton.muted = true;
   krutoj.muted = false;
+  czotko.muted = true;
   krutoj.play()
 }
 
@@ -264,12 +293,14 @@ function anphoton() {
   var swadba = document.getElementById('swadba');
   var terorist = document.getElementById('terorist');
   var krutoj = document.getElementById('krutoj');
+  var czotko = document.getElementById('czotko');
   swadba.muted = true;
   terorist.muted = true;
   teraria.muted = true;
   dymok.muted = true;
   krutoj.muted = true;
   anphoton.muted = false;
+  czotko.muted = true;
   anphoton.play()
 }
   
