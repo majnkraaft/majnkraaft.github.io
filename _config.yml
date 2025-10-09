@@ -3,6 +3,6 @@ description: Redirecting all pages to example.com
 
 defaults:
   - scope:
-  path: ""
+    path: ""
   values:
-  layout: redirect
+    layout: redirect
