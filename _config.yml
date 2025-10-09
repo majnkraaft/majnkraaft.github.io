@@ -1,5 +1,0 @@
-title: My Redirect Site
-description: Redirecting all pages to example.com
-git add _config.yml _layouts/redirect.html
-git commit -m "Enable Jekyll and redirect all pages"
-git push
