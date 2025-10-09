@@ -1,9 +1,3 @@
 title: My Redirect Site
 description: Redirecting all pages to example.com
 theme: null
-
-defaults:
-  - scope:
-    path: ""
-    values:
-      layout: redirect
