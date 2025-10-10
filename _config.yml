@@ -4,6 +4,6 @@ theme: null
 
 defaults:
   - scope:
-    path: ""
+      path: ""
     values:
       layout: redirect
