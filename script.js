@@ -323,14 +323,16 @@ function trewoga() {
 
 
 //zeby otkrywali sie linki w nowym tabie
-document.querySelectorAll('a').forEach(link => {
-  // Skip gallery links
-  if (link.closest('.gallery-item')) return;
+document.querySelectorAll('a[href]').forEach(link => {
+  const isGallery = link.hasAttribute('data-slb') || link.closest('.gallery');
 
+  // Skip gallery/lightbox links and internal same-page anchors
+  if (isGallery || link.getAttribute('href').startsWith('#')) return;
+  
+  // Add new tab attributes
   link.setAttribute('target', '_blank');
   link.setAttribute('rel', 'noopener noreferrer');
 });
-
 
 //dla latającego
 const object = document.getElementById('lata');
