@@ -549,23 +549,5 @@ if ( !!window.SLB && SLB.has_child('View.extend_theme') ) { SLB.View.extend_them
 	var cryout_global_content_width = 900;
 	var cryout_toTop_offset = 1150;
 			</script>
-	<script>
-document.querySelectorAll('a[href]').forEach(link => {
-  // Skip links that are part of lightbox/gallery
-  if (link.hasAttribute('data-slb-active') || link.hasAttribute('data-slb-asset') || link.closest('.gallery')) {
-    return; // do NOT add target
-  }
-
-  // Skip anchor links within the same page
-  if (link.getAttribute('href').startsWith('#')) return;
-
-  // Optional: skip internal links (same domain)
-  if (link.href.startsWith(window.location.origin)) return;
-
-  // Add new tab attributes
-  link.setAttribute('target', '_blank');
-  link.setAttribute('rel', 'noopener noreferrer');
-});
-</script>
 </body>
 </html>
