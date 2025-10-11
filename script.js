@@ -324,9 +324,13 @@ function trewoga() {
 
 //zeby otkrywali sie linki w nowym tabie
 document.querySelectorAll('a').forEach(link => {
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener noreferrer');
-  });
+  // Skip gallery links
+  if (link.closest('.gallery')) return;
+
+  link.setAttribute('target', '_blank');
+  link.setAttribute('rel', 'noopener noreferrer');
+});
+
 
 //dla latającego
 const object = document.getElementById('lata');
