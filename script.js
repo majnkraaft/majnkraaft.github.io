@@ -325,7 +325,7 @@ function trewoga() {
 //zeby otkrywali sie linki w nowym tabie
 document.querySelectorAll('a').forEach(link => {
   // Skip gallery links
-  if (link.closest('.gallery-icon')) return;
+  if (link.closest('.gallery-item')) return;
 
   link.setAttribute('target', '_blank');
   link.setAttribute('rel', 'noopener noreferrer');
