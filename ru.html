@@ -419,6 +419,18 @@ if ( !!window.SLB && SLB.has_child('View.extend_theme') ) { SLB.View.extend_them
 	<script type="text/javascript">
 	var cryout_global_content_width = 900;
 	var cryout_toTop_offset = 1150;
-			</script> 
+			</script>
+	<script>
+document.querySelectorAll('a[href]').forEach(link => {
+  // Skip gallery/lightbox links
+  if (link.closest('.gallery') || link.hasAttribute('data-slb-active') || link.hasAttribute('data-slb-asset')) return;
+
+  // Skip anchors
+  if (link.getAttribute('href').startsWith('#')) return;
+
+  link.setAttribute('target', '_blank');
+  link.setAttribute('rel', 'noopener noreferrer');
+});
+</script>
 </body>
 </html>
