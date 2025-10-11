@@ -250,6 +250,18 @@ var tempera_settings = {"mobile":"1","fitvids":"1","contentwidth":"900"};
 	<script type="text/javascript">
 	var cryout_global_content_width = 900;
 	var cryout_toTop_offset = 1150;
-			</script> 
+			</script>
+	<script>
+	  //odkrywac linki w nowych tabach
+document.querySelectorAll('a[href]').forEach(link => {
+  // Skip gallery/lightbox links
+  if (link.closest('.gallery') || link.hasAttribute('data-slb-active') || link.hasAttribute('data-slb-asset')) return;
+
+  // Skip anchors
+  if (link.getAttribute('href').startsWith('#')) return;
+
+  link.setAttribute('target', '_blank');
+  link.setAttribute('rel', 'noopener noreferrer');
+});
 </body>
 </html>
