@@ -35,20 +35,20 @@
 </head>
 <body>
     <div class="countdown">
-        <div class="countdown-number" id="seconds">30</div>
+        <div class="countdown-number" id="seconds">3600</div>
         <div class="countdown-label">Sekund</div>
     </div>
     <script>
         const countdown = () => {
             const countdownElement = document.getElementById('seconds');
-            let timeLeft = 30;
+            let timeLeft = 3600;
 
             const updateCountdown = () => {
                 countdownElement.innerText = timeLeft;
                 if (timeLeft > 0) {
                     timeLeft--;
                 } else {
-                    timeLeft = 30; // Reset to 30 seconds
+                    timeLeft = 3600; // Reset to 30 seconds
                 }
             };
 
