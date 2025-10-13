@@ -2,7 +2,7 @@ title: My Redirect Site
 description: Redirecting all pages to example.com
 theme: null
 
-#defaults:
+defaults:
   - scope:
       path: ""
     values:
