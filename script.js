@@ -321,6 +321,9 @@ function trewoga() {
   alert("hours")
 }
 
+function opasno() {
+  alert("Zakryj drzwi albo chociaby ZMNIEJSZ DŹWIĘK!!!")
+}
 
 //dla latającego
 const object = document.getElementById('lata');
