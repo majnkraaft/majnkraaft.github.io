@@ -264,7 +264,7 @@ function terorist() {
   krutoj.muted = true;
   anphoton.muted = true;
   czotko.muted = true;
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  //await new Promise(resolve => setTimeout(resolve, 2000));
   terorist.play()
 }
 
