@@ -133,6 +133,7 @@ function nipotrzebna() {
  let b = 0;
  let c = 0;
 
+//muzyka dla wsech sajtów
  function wlaczyc() {
    var kot = document.getElementById('kot');
    var nokia = document.getElementById('nokia');
@@ -165,6 +166,7 @@ function nipotrzebna() {
    }
  };
 
+//tylko dla detsad
 function muzyczka() {
   var teraria = document.getElementById('teraria');
   var dymok = document.getElementById('doscpalic');
@@ -173,6 +175,7 @@ function muzyczka() {
   var krutoj = document.getElementById('krutoj');
   var anphoton = document.getElementById('anphoton');
   var czotko = document.getElementById('czotko');
+  var rybalka = document.getElementById('rybalka');
   if (teraria.muted === false) {
     teraria.muted = true;
   }
@@ -184,6 +187,7 @@ function muzyczka() {
     krutoj.muted = true;
     anphoton.muted = true;
     czotko.muted = true;
+    rybalka.muted = true;
   }
 }
 
@@ -196,6 +200,7 @@ function kurilszczik() {
   var terorist = document.getElementById('terorist');
  var krutoj = document.getElementById('krutoj');
  var czotko = document.getElementById('czotko');
+ var rybalka = document.getElementById('rybalka');
   if (dymok.muted === true) {
     dymok.muted = false;
     teraria.muted = true;
@@ -204,6 +209,7 @@ function kurilszczik() {
     krutoj.muted = true;
     anphoton.muted = true;
     czotko.muted = true;
+    rybalka.muted = true;
     dymok.play()
   }
   else {
@@ -220,7 +226,7 @@ function swadba() {
   var swadba = document.getElementById('swadba');
   var terorist = document.getElementById('terorist');
   var krutoj = document.getElementById('krutoj');
-  var czotko = document.getElementById('czotko');
+  var czotko = document.getElementById('czotko');var rybalka = document.getElementById('rybalka');
   swadba.muted = false;
   terorist.muted = true;
   teraria.muted = true;
@@ -228,6 +234,7 @@ function swadba() {
   krutoj.muted = true;
   anphoton.muted = true;
   czotko.muted = true;
+  rybalka.muted = true;
   swadba.play()
 }
 
@@ -239,6 +246,7 @@ function czotko() {
   var terorist = document.getElementById('terorist');
   var krutoj = document.getElementById('krutoj');
   var czotko = document.getElementById('czotko');
+  var rybalka = document.getElementById('rybalka');
   czotko.muted = false;
   swadba.muted = true;
   terorist.muted = true;
@@ -246,7 +254,27 @@ function czotko() {
   dymok.muted = true;
   krutoj.muted = true;
   anphoton.muted = true;
+  rybalka.muted = true;
   czotko.play()
+}
+
+function rybalka() {
+  var anphoton = document.getElementById('anphoton');
+  var dymok = document.getElementById('doscpalic');
+  var teraria = document.getElementById('teraria');
+  var swadba = document.getElementById('swadba');
+  var terorist = document.getElementById('terorist');
+  var krutoj = document.getElementById('krutoj');
+  var czotko = document.getElementById('czotko');
+  var rybalka = document.getElementById('rybalka');
+  rybalka.muted = false;
+  terorist.muted = true;
+  teraria.muted = true;
+  dymok.muted = true;
+  krutoj.muted = true;
+  anphoton.muted = true;
+  czotko.muted = true;
+  rybalka.play()
 }
 
 function terorist() {
@@ -257,12 +285,14 @@ function terorist() {
   var terorist = document.getElementById('terorist');
   var krutoj = document.getElementById('krutoj');
   var czotko = document.getElementById('czotko');
+  var rybalka = document.getElementById('rybalka');
   swadba.muted = true;
   teraria.muted = true;
   dymok.muted = true;
   krutoj.muted = true;
   anphoton.muted = true;
   czotko.muted = true;
+  rybalka.muted = true;
   //await new Promise(resolve => setTimeout(resolve, 2000));
   setTimeout(() => {
     terorist.muted = false;
@@ -278,6 +308,7 @@ function krutoj() {
   var terorist = document.getElementById('terorist');
   var krutoj = document.getElementById('krutoj');
   var czotko = document.getElementById('czotko');
+  var rybalka = document.getElementById('rybalka');
   swadba.muted = true;
   terorist.muted = true;
   teraria.muted = true;
@@ -285,6 +316,7 @@ function krutoj() {
   anphoton.muted = true;
   krutoj.muted = false;
   czotko.muted = true;
+  rybalka.muted = true;
   krutoj.play()
 }
 
@@ -297,13 +329,15 @@ function anphoton() {
   var terorist = document.getElementById('terorist');
   var krutoj = document.getElementById('krutoj');
   var czotko = document.getElementById('czotko');
+  var rybalka = document.getElementById('rybalka');
   swadba.muted = true;
   terorist.muted = true;
   teraria.muted = true;
   dymok.muted = true;
   krutoj.muted = true;
   anphoton.muted = false;
-  czotko.muted = true;
+  czotko.muted = true
+  rybalka.muted = true;
   anphoton.play()
 }
   
