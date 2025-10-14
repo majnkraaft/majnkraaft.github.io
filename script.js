@@ -361,7 +361,7 @@ document.addEventListener('click', () => {
   czotko.muted = true
   rybalka.muted = true;
   console.log("wsio mute")
-}
+})
 
    
 
