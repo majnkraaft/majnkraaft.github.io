@@ -258,14 +258,16 @@ function terorist() {
   var krutoj = document.getElementById('krutoj');
   var czotko = document.getElementById('czotko');
   swadba.muted = true;
-  terorist.muted = false;
   teraria.muted = true;
   dymok.muted = true;
   krutoj.muted = true;
   anphoton.muted = true;
   czotko.muted = true;
   //await new Promise(resolve => setTimeout(resolve, 2000));
-  terorist.play()
+  setTimeout(() => {
+    terorist.muted = false;
+    terorist.play();
+  }, 2000);
 }
 
 function krutoj() {
