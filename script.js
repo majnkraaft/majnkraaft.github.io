@@ -342,28 +342,6 @@ function anphoton() {
   console.log("Anton play")
 }
 
-//mute muzyka kiedy wyjdzisz ze zdjęci albo z galerii
-document.addEventListener('click', () => {
-     var anphoton = document.getElementById('anphoton');
-     var dymok = document.getElementById('doscpalic');
-     var teraria = document.getElementById('teraria');
-     var swadba = document.getElementById('swadba');
-     var terorist = document.getElementById('terorist');
-     var krutoj = document.getElementById('krutoj');
-     var czotko = document.getElementById('czotko');
-     var rybalka = document.getElementById('rybalka');
-  swadba.muted = true;
-  terorist.muted = true;
-  teraria.muted = true;
-  dymok.muted = true;
-  krutoj.muted = true;
-  anphoton.muted = true;
-  czotko.muted = true
-  rybalka.muted = true;
-  console.log("wsio mute")
-})
-
-   
 
 function trewoga() {
   alert("This")
