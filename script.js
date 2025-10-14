@@ -339,6 +339,7 @@ function anphoton() {
   czotko.muted = true
   rybalka.muted = true;
   anphoton.play()
+  console.log("Anton play")
 }
 
 //mute muzyka kiedy wyjdzisz ze zdjęci albo z galerii
@@ -359,6 +360,7 @@ document.addEventListener('click', () => {
   anphoton.muted = true;
   czotko.muted = true
   rybalka.muted = true;
+  console.log("wsio mute")
 }
 
    
