@@ -470,6 +470,28 @@ body.custom-background { background-color: #ffffff; background-image: url("/imag
 var tempera_settings = {"mobile":"1","fitvids":"1","contentwidth":"900"};
 /* ]]> */
 </script>
+<script type="text/javascript">
+  //mute muzyka kiedy wyjdzisz ze zdjęci albo z galerii (kiedy byle co navisnisz, ale ona przed unmute)
+document.addEventListener('click', () => {
+     var anphoton = document.getElementById('anphoton');
+     var dymok = document.getElementById('doscpalic');
+     var teraria = document.getElementById('teraria');
+     var swadba = document.getElementById('swadba');
+     var terorist = document.getElementById('terorist');
+     var krutoj = document.getElementById('krutoj');
+     var czotko = document.getElementById('czotko');
+     var rybalka = document.getElementById('rybalka');
+  swadba.muted = true;
+  terorist.muted = true;
+  teraria.muted = true;
+  dymok.muted = true;
+  krutoj.muted = true;
+  anphoton.muted = true;
+  czotko.muted = true
+  rybalka.muted = true;
+  console.log("wsio mute")
+})
+</script>
 <script src="script.js"></script>
 <script type="text/javascript" src="https://www.parcevskio.lt/wp-content/themes/tempera/js/frontend.js?ver=1.8.2" id="tempera-frontend-js"></script>
 <script type="text/javascript" src="https://www.parcevskio.lt/wp-content/plugins/simple-lightbox/client/js/prod/lib.core.js?ver=2.9.3" id="slb_core-js"></script>
