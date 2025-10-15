@@ -473,7 +473,7 @@ var tempera_settings = {"mobile":"1","fitvids":"1","contentwidth":"900"};
 </script>
 <script type="text/javascript">
   //mute muzyka kiedy wyjdzisz ze zdjęci albo z galerii (kiedy byle co navisnisz, ale ona przed unmute)
-  const videos = document.querySelectorAll('video');
+  const videos = document.querySelectorAll('video:not(#teraria)');
 
   // funkcja dla mute all videos
   function muteAll() {
@@ -485,7 +485,7 @@ var tempera_settings = {"mobile":"1","fitvids":"1","contentwidth":"900"};
     // If clicked outside photos and buttons
     if (!e.target.closest('.gallery-item, .muzyczkaButton')) {
       muteAll();
-      console.log('wszystkie wideo mute');
+      console.log('wideo dla zdjęciów mute');
     }
   });
 </script>
