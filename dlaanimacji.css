@@ -191,6 +191,9 @@ keyframes zn {
   animation: pulse 1s infinite;
 }
 
+.bigpulse {
+  animation: bigpulse 1s infinite;
+}
 
 /* dla latającego*/
 .lata {
