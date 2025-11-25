@@ -172,7 +172,7 @@ keyframes zn {
 
 /* Apply the animation to an element */
 .bigpulse {
-  animation-name: pulse;
+  animation-name: bigpulse;
   animation-duration: 1s;
   animation-delay: 10s;
   animation-iteration-count: infinite;
