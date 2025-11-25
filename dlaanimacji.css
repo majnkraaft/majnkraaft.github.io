@@ -158,6 +158,25 @@ keyframes zn {
   animation-iteration-count: infinite;
 }
 
+@keyframes bigpulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the animation to an element */
+.bigpulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-delay: 10s;
+  animation-iteration-count: infinite;
+}
 
 /* Include the animations defined above */
 .bounce {
