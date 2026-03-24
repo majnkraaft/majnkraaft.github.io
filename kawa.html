@@ -64,6 +64,10 @@
 
     const startDate = new Date("2024-05-01"); // May 1 is a safe default
     const now = new Date();
+    
+    if (now.getMonth < startDate.getMonth) {
+      now.getMonth += 12;
+    }
 
     const yearsDiff = now.getFullYear() - startDate.getFullYear();
    const monthsDiff = now.getMonth() - startDate.getMonth();
