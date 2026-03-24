@@ -63,17 +63,22 @@
 
 
     const startDate = new Date("2024-05-01"); // May 1 is a safe default
-    var now = new Date();
+    var now = new Date();//today
     
-    if (now.getMonth < startDate.getMonth) {
-      now.getMonth += 12;
-    }
+    //if (now.getMonth() < startDate.getMonth()) {
+     // now.setMonth(now.getMonth() + 12)
+    //}
 
     const yearsDiff = now.getFullYear() - startDate.getFullYear();
    const monthsDiff = now.getMonth() - startDate.getMonth();
+   //ile całych pełnych lat (+1) i minusowe miesiecy (dla podliczenia ile wszystkiego miesiecy)
 
   let totalMonths = yearsDiff * 12 + monthsDiff;
-//liczy miesiący i lata
+  
+  let roznLat = Math.floor(totalMonths / 12);
+  let roznMiesiecy = totalMonths % 12;
+  console.log("roznica miesiecy: " + roznMiesiecy);
+//liczy miesiący i lata dla ludzi
 
 
 
@@ -129,10 +134,10 @@
      updateDisplay();
      upileprocwybrano(); // Initialize the display with the default slider value
       
-      if ((monthsDiff === 1) || (monthsDiff === 21) || (monthsDiff === 31) || (monthsDiff === 41) || (monthsDiff === 51)) {
+      if (roznMiesiecy === 1) {
               miesiac = " miesiąc";
             }
-            else if (monthsDiff === 0) {
+            else if (roznMiesiecy === 0) {
               miesiac = "";
             }
             
@@ -141,11 +146,11 @@
             }
      //rok czy lat czy lata
   
-     if ((yearsDiff === 1) || (yearsDiff === 21) || (yearsDiff === 31) || (yearsDiff === 41) || (yearsDiff === 51)) {
+     if ((roznLat === 1) || (roznLat === 21) || (roznLat === 31) || (roznLat === 41) || (roznLat === 51)) {
               rok = " rok"
             }
             
-            else if ((yearsDiff < 5 && yearsDiff > 1) || (yearsDiff > 21 && yearsDiff < 25) || (yearsDiff > 31 && yearsDiff < 35) || (yearsDiff > 41 && yearsDiff < 45) || (yearsDiff > 51 && yearsDiff < 55)) {
+            else if ((roznLat < 5 && roznLat > 1) || (roznLat > 21 && roznLat < 25) || (roznLat > 31 && roznLat < 35) || (roznLat > 41 && roznLat < 45) || (roznLat > 51 && roznLat < 55)) {
               rok = " lata"
             }
             else {
@@ -153,12 +158,12 @@
             }
      
      
-     if (monthsDiff === 0) {
-       monthsDiff = "tak dużo! :O"
+     if (roznMiesiecy === 0) {
+       roznMiesiecy = "tak dużo! :O"
      };//to żeby posle "i" pusto nie bylo
       
       function ilePrzeszlo() {
-       document.getElementById('ileLatPrzeszlo').textContent = "Czekami " + yearsDiff + rok + " i " + monthsDiff + miesiac;
+       document.getElementById('ileLatPrzeszlo').textContent = "Czekami " + roznLat + rok + " i " + roznMiesiecy + miesiac;
       }
       ilePrzeszlo()//ile lat przeszlo
       
