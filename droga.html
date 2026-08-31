@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20-Hour Countdown & Bus Tracker</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 16px;
+    }
+
+    .container {
+      background: #1e293b;
+      padding: 30px 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 650px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(0.9rem, 4vw, 1.25rem);
+      font-weight: 600;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+
+    .current-time-display {
+      font-size: clamp(0.85rem, 3.5vw, 1rem);
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    .timer {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: clamp(2.2rem, 9vw, 3.5rem);
+      font-weight: 700;
+      color: #f8fafc;
+      background: #090d16;
+      padding: 16px 10px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+      border: 1px solid #334155;
+    }
+
+    .road-wrapper {
+      position: relative;
+      width: 100%;
+      height: 70px;
+      background: #334155;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      border: 2px solid #475569;
+    }
+
+    .dashed-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: repeating-linear-gradient(
+        90deg,
+        #f1f5f9 0,
+        #f1f5f9 15px,
+        transparent 15px,
+        transparent 30px
+      );
+      transform: translateY(-50%);
+    }
+
+    .bus {
+      position: absolute;
+      top: 50%;
+      left: 3%;
+      /* Flips the bus emoji horizontally to drive to the right */
+      transform: translate(-50%, -50%) scaleX(-1);
+      font-size: clamp(1.8rem, 6vw, 2.3rem);
+      transition: left 0.5s ease-out;
+      z-index: 2;
+    }
+
+    .finish-flag {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: clamp(1.4rem, 5vw, 1.8rem);
+      z-index: 1;
+    }
+
+    .progress-info {
+      margin-top: 16px;
+      font-size: clamp(0.8rem, 3vw, 0.95rem);
+      color: #94a3b8;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px 14px;
+      }
+
+      .progress-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Countdown to Arrival</h1>
+    <div class="current-time-display" id="current-time">Current Time: --:--:--</div>
+    
+    <div class="timer" id="timer">00:00:00</div>
+
+    <div class="road-wrapper">
+      <div class="dashed-line"></div>
+      <div class="bus" id="bus">🚌</div>
+      <div class="finish-flag">🏁</div>
+    </div>
+
+    <div class="progress-info">
+      <span>Start (-20h)</span>
+      <span id="progress-percent">0.0% Progress</span>
+      <span>Target: Sep 1, 12:00 UTC+2</span>
+    </div>
+  </div>
+
+  <script>
+    // Target date: September 1, 2026, 12:00:00 UTC+2
+    const TARGET_TIME = new Date('2026-09-01T12:00:00+02:00').getTime();
+    const TOTAL_DURATION = 20 * 60 * 60 * 1000; // 20 hours in milliseconds
+    const START_TIME = TARGET_TIME - TOTAL_DURATION;
+
+    const currentTimeEl = document.getElementById('current-time');
+    const timerEl = document.getElementById('timer');
+    const busEl = document.getElementById('bus');
+    const progressPercentEl = document.getElementById('progress-percent');
+
+    function updateTimer() {
+      // Grab current system time in real-time
+      const nowDate = new Date();
+      const now = nowDate.getTime();
+
+      // Display live current time on screen
+      currentTimeEl.textContent = `Current Time: ${nowDate.toLocaleTimeString()}`;
+
+      const remainingTime = TARGET_TIME - now;
+
+      if (remainingTime <= 0) {
+        timerEl.textContent = "00:00:00";
+        busEl.style.left = "90%";
+        progressPercentEl.textContent = "100% Progress (Arrived)";
+        return;
+      }
+
+      // Remaining hours, minutes, seconds breakdown
+      const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+      const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+      const hh = String(hours).padStart(2, '0');
+      const mm = String(minutes).padStart(2, '0');
+      const ss = String(seconds).padStart(2, '0');
+
+      timerEl.textContent = `${hh}:${mm}:${ss}`;
+
+      // Calculate progress relative to current time vs 20-hour window
+      const elapsedTime = now - START_TIME;
+      let progressRatio = elapsedTime / TOTAL_DURATION;
+      progressRatio = Math.max(0, Math.min(1, progressRatio)); // Clamp 0 to 1
+
+      // Map progress ratio to bus visual track boundaries (4% to 90%)
+      const minPos = 4;
+      const maxPos = 90;
+      const currentPos = minPos + progressRatio * (maxPos - minPos);
+
+      busEl.style.left = `${currentPos}%`;
+      progressPercentEl.textContent = `${(progressRatio * 100).toFixed(1)}% Progress`;
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>
