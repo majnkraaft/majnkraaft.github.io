@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Road to September 1</title>
+<style>
+  :root {
+    --sky: #bfe8ff;
+    --road: #3d4248;
+    --road-line: #f5d76e;
+    --bus: #e64b35;
+    --bus-dark: #9f2c20;
+    --grass: #79b95b;
+    --white: #fff;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    min-height: 100%;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(var(--sky) 0 68%, var(--grass) 68% 100%);
+    color: #17202a;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 18px;
+    overflow-x: hidden;
+  }
+
+  .page {
+    width: min(980px, 100%);
+    text-align: center;
+  }
+
+  .label {
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    opacity: .62;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 7vw, 4.5rem);
+    line-height: .95;
+    letter-spacing: -.05em;
+  }
+
+  .target {
+    margin-top: 14px;
+    font-size: clamp(.95rem, 2vw, 1.1rem);
+    font-weight: 600;
+    opacity: .7;
+  }
+
+  .timer {
+    margin: 34px auto 42px;
+    display: flex;
+    justify-content: center;
+    gap: clamp(8px, 2vw, 20px);
+  }
+
+  .unit {
+    min-width: clamp(68px, 13vw, 120px);
+  }
+
+  .number {
+    font-variant-numeric: tabular-nums;
+    font-size: clamp(2.4rem, 8vw, 5.2rem);
+    font-weight: 900;
+    letter-spacing: -.06em;
+    line-height: 1;
+  }
+
+  .unit-label {
+    margin-top: 7px;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    opacity: .5;
+  }
+
+  .road-wrap {
+    position: relative;
+    height: 220px;
+    display: flex;
+    align-items: center;
+  }
+
+  .road {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 104px;
+    transform: translateY(-50%);
+    background: var(--road);
+    border-top: 5px solid #565c63;
+    border-bottom: 5px solid #2d3135;
+    overflow: hidden;
+  }
+
+  .road::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 7px;
+    transform: translateY(-50%);
+    background: repeating-linear-gradient(
+      to right,
+      transparent 0 42px,
+      var(--road-line) 42px 88px,
+      transparent 88px 130px
+    );
+    opacity: .9;
+  }
+
+  .road-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, rgba(255,255,255,.06), rgba(255,255,255,.16));
+    transition: width .25s linear;
+  }
+
+  .bus {
+    position: absolute;
+    z-index: 2;
+    left: 0%;
+    top: 50%;
+    width: 126px;
+    height: 62px;
+    transform: translate(-50%, -50%);
+    transition: left .25s linear;
+    filter: drop-shadow(0 7px 5px rgba(0,0,0,.25));
+  }
+
+  .bus-body {
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    top: 7px;
+    bottom: 11px;
+    border-radius: 9px 12px 7px 7px;
+    background: var(--bus);
+    border: 3px solid var(--bus-dark);
+  }
+
+  .bus-body::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    height: 22px;
+    border-radius: 4px;
+    background:
+      linear-gradient(to right,
+        #bde6ef 0 27%,
+        transparent 27% 31%,
+        #bde6ef 31% 58%,
+        transparent 58% 62%,
+        #bde6ef 62% 100%);
+    border: 2px solid rgba(0,0,0,.2);
+  }
+
+  .bus-front {
+    position: absolute;
+    right: -3px;
+    top: 14px;
+    width: 10px;
+    height: 29px;
+    border-radius: 0 7px 7px 0;
+    background: #f0a33a;
+  }
+
+  .wheel {
+    position: absolute;
+    bottom: 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #1d2023;
+    border: 5px solid #555b60;
+  }
+
+  .wheel.left { left: 19px; }
+  .wheel.right { right: 18px; }
+
+  .bus-stop {
+    position: absolute;
+    z-index: 3;
+    left: 100%;
+    top: 50%;
+    width: 2px;
+    height: 135px;
+    background: rgba(255,255,255,.25);
+    transform: translateY(-50%);
+  }
+
+  .flag {
+    position: absolute;
+    left: calc(100% - 12px);
+    top: calc(50% - 84px);
+    z-index: 4;
+    font-size: .72rem;
+    font-weight: 900;
+    white-space: nowrap;
+    transform: translateX(-100%);
+    opacity: .55;
+  }
+
+  .status {
+    margin-top: 24px;
+    font-weight: 700;
+    opacity: .62;
+  }
+
+  .finished .bus {
+    left: calc(100% - 2px);
+  }
+
+  @media (max-width: 600px) {
+    .road-wrap { height: 180px; }
+    .road { height: 88px; }
+    .bus { width: 100px; height: 50px; }
+    .bus-body { bottom: 9px; }
+    .wheel { width: 21px; height: 21px; border-width: 4px; }
+    .wheel.left { left: 16px; }
+    .wheel.right { right: 15px; }
+    .flag { top: calc(50% - 70px); }
+  }
+</style>
+</head>
+<body>
+<main class="page" id="page">
+  <div class="label">Departure countdown</div>
+  <h1>Road to September 1</h1>
+  <div class="target">September 1, 2026 · 12:00 UTC+2</div>
+
+  <section class="timer" aria-label="Countdown">
+    <div class="unit"><div class="number" id="hours">00</div><div class="unit-label">Hours</div></div>
+    <div class="number">:</div>
+    <div class="unit"><div class="number" id="minutes">00</div><div class="unit-label">Minutes</div></div>
+    <div class="number">:</div>
+    <div class="unit"><div class="number" id="seconds">00</div><div class="unit-label">Seconds</div></div>
+  </section>
+
+  <div class="road-wrap" aria-hidden="true">
+    <div class="road">
+      <div class="road-progress" id="progress"></div>
+      <div class="bus" id="bus">
+        <div class="bus-body"></div>
+        <div class="bus-front"></div>
+        <div class="wheel left"></div>
+        <div class="wheel right"></div>
+      </div>
+      <div class="bus-stop"></div>
+      <div class="flag">ARRIVAL · 12:00 UTC+2</div>
+    </div>
+  </div>
+
+  <div class="status" id="status">The bus is on its way…</div>
+</main>
+
+<script>
+  // Target: 2026-09-01 12:00 at UTC+2 = 2026-09-01 10:00 UTC.
+  const target = new Date("2026-09-01T10:00:00Z").getTime();
+
+  // Progress starts at the beginning of the 20-hour countdown.
+  // This makes the bus travel the road over a 20-hour window ending at the target.
+  const start = target - 20 * 60 * 60 * 1000;
+  const total = target - start;
+
+  const hoursEl = document.getElementById("hours");
+  const minutesEl = document.getElementById("minutes");
+  const secondsEl = document.getElementById("seconds");
+  const busEl = document.getElementById("bus");
+  const progressEl = document.getElementById("progress");
+  const statusEl = document.getElementById("status");
+  const pageEl = document.getElementById("page");
+
+  const pad = n => String(n).padStart(2, "0");
+
+  function update() {
+    const now = Date.now();
+    const remaining = Math.max(0, target - now);
+    const elapsed = Math.min(total, Math.max(0, now - start));
+    const progress = elapsed / total;
+
+    const h = Math.floor(remaining / 3600000);
+    const m = Math.floor((remaining % 3600000) / 60000);
+    const s = Math.floor((remaining % 60000) / 1000);
+
+    hoursEl.textContent = pad(h);
+    minutesEl.textContent = pad(m);
+    secondsEl.textContent = pad(s);
+
+    progressEl.style.width = `${progress * 100}%`;
+    busEl.style.left = `${progress * 100}%`;
+
+    if (remaining <= 0) {
+      statusEl.textContent = "Arrived — September 1, 12:00 UTC+2.";
+      pageEl.classList.add("finished");
+    } else {
+      statusEl.textContent = `The bus is ${Math.round(progress * 100)}% of the way there.`;
+    }
+  }
+
+  update();
+  setInterval(update, 250);
+</script>
+</body>
+</html>
